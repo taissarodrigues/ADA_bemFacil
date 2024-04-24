@@ -24,7 +24,7 @@ struct ProgramDetailView: View {
                 VStack(alignment: .leading, spacing: 20) {
                     ForEach(textos, id: \.self) { texto in
                         Text(texto)
-                            .font(texto.contains("Título") || texto.contains("Condições") || texto.contains("Etapas") ? .headline : .body)
+                            .font(texto.contains("Títuloss") || texto.contains("Condições") || texto.contains("Etapas") ? .headline : .body)
                     }
                     
                     Divider()
