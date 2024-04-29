@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4A4844952BDFB69F0075B6AF /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4844942BDFB69F0075B6AF /* Util.swift */; };
+		4A4844982BDFB6C50075B6AF /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4844972BDFB6C50075B6AF /* Models.swift */; };
+		4A48449B2BDFB6E40075B6AF /* Features.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A48449A2BDFB6E40075B6AF /* Features.swift */; };
 		CEAFED082BD94D9C00621FF3 /* bem_facilApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAFED072BD94D9C00621FF3 /* bem_facilApp.swift */; };
 		CEAFED0A2BD94D9C00621FF3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAFED092BD94D9C00621FF3 /* ContentView.swift */; };
 		CEAFED0C2BD94D9D00621FF3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEAFED0B2BD94D9D00621FF3 /* Assets.xcassets */; };
@@ -14,6 +17,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4A4844942BDFB69F0075B6AF /* Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
+		4A4844972BDFB6C50075B6AF /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		4A48449A2BDFB6E40075B6AF /* Features.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Features.swift; sourceTree = "<group>"; };
 		CEAFED042BD94D9C00621FF3 /* bem-facil.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "bem-facil.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEAFED072BD94D9C00621FF3 /* bem_facilApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bem_facilApp.swift; sourceTree = "<group>"; };
 		CEAFED092BD94D9C00621FF3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -32,6 +38,46 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4A4844912BDFB65E0075B6AF /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CEAFED0B2BD94D9D00621FF3 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		4A4844922BDFB6730075B6AF /* App */ = {
+			isa = PBXGroup;
+			children = (
+				CEAFED072BD94D9C00621FF3 /* bem_facilApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		4A4844932BDFB6910075B6AF /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				4A4844942BDFB69F0075B6AF /* Util.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		4A4844962BDFB6B20075B6AF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4A4844972BDFB6C50075B6AF /* Models.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		4A4844992BDFB6D00075B6AF /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				4A48449A2BDFB6E40075B6AF /* Features.swift */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
 		CEAFECFB2BD94D9C00621FF3 = {
 			isa = PBXGroup;
 			children = (
@@ -51,9 +97,12 @@
 		CEAFED062BD94D9C00621FF3 /* bem-facil */ = {
 			isa = PBXGroup;
 			children = (
-				CEAFED072BD94D9C00621FF3 /* bem_facilApp.swift */,
+				4A4844922BDFB6730075B6AF /* App */,
+				4A4844912BDFB65E0075B6AF /* Resources */,
+				4A4844932BDFB6910075B6AF /* Utils */,
+				4A4844962BDFB6B20075B6AF /* Models */,
+				4A4844992BDFB6D00075B6AF /* Features */,
 				CEAFED092BD94D9C00621FF3 /* ContentView.swift */,
-				CEAFED0B2BD94D9D00621FF3 /* Assets.xcassets */,
 				CEAFED0D2BD94D9D00621FF3 /* Preview Content */,
 			);
 			path = "bem-facil";
@@ -138,7 +187,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEAFED0A2BD94D9C00621FF3 /* ContentView.swift in Sources */,
+				4A4844952BDFB69F0075B6AF /* Util.swift in Sources */,
 				CEAFED082BD94D9C00621FF3 /* bem_facilApp.swift in Sources */,
+				4A4844982BDFB6C50075B6AF /* Models.swift in Sources */,
+				4A48449B2BDFB6E40075B6AF /* Features.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
