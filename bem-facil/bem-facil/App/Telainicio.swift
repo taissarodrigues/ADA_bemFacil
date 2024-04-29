@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct Telainicio: View {
     var body: some View {
         VStack {
             Image(systemName: "globesdsd")
@@ -18,10 +18,11 @@ struct ContentView: View {
             //Teste
             Text("Hello, world!")
         }
+        .background(Color("azulPrincipal"))
         .padding()
     }
 }
 
 #Preview {
-    ContentView()
+    Telainicio()
 }
