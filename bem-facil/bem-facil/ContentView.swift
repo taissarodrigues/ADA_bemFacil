@@ -13,6 +13,9 @@ struct ContentView: View {
             Image(systemName: "globesdsd")
                 .imageScale(.large)
                 .foregroundStyle(.tint)
+            
+            
+            //Teste
             Text("Hello, world!")
         }
         .padding()
