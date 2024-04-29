@@ -8,7 +8,7 @@
 import SwiftUI
 
 @main
-struct bem_facilApp: App {
+struct BemFacilApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
