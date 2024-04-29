@@ -10,16 +10,16 @@ import SwiftUI
 struct Telainicio: View {
     var body: some View {
         VStack {
-            Image(systemName: "globesdsd")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
+            Image("logo")
+               
             
-            
-            //Teste
-            Text("Hello, world!")
+    
         }
-        .background(Color("azulPrincipal"))
-        .padding()
+        .frame(maxWidth: .infinity,maxHeight: .infinity)
+       .background(Color("azulPrincipal"))/
+        .ignoresSafeArea()
+        
+       
     }
 }
 

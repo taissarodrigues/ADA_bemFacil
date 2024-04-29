@@ -11,7 +11,7 @@
 		4A4844982BDFB6C50075B6AF /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4844972BDFB6C50075B6AF /* Models.swift */; };
 		4A48449B2BDFB6E40075B6AF /* Features.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A48449A2BDFB6E40075B6AF /* Features.swift */; };
 		CEAFED082BD94D9C00621FF3 /* bem_facilApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAFED072BD94D9C00621FF3 /* bem_facilApp.swift */; };
-		CEAFED0A2BD94D9C00621FF3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAFED092BD94D9C00621FF3 /* ContentView.swift */; };
+		CEAFED0A2BD94D9C00621FF3 /* Telainicio.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAFED092BD94D9C00621FF3 /* Telainicio.swift */; };
 		CEAFED0C2BD94D9D00621FF3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEAFED0B2BD94D9D00621FF3 /* Assets.xcassets */; };
 		CEAFED0F2BD94D9D00621FF3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEAFED0E2BD94D9D00621FF3 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -20,9 +20,10 @@
 		4A4844942BDFB69F0075B6AF /* Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
 		4A4844972BDFB6C50075B6AF /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		4A48449A2BDFB6E40075B6AF /* Features.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Features.swift; sourceTree = "<group>"; };
+		CE8949DE2BDFCBB000D6F5DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		CEAFED042BD94D9C00621FF3 /* bem-facil.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "bem-facil.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEAFED072BD94D9C00621FF3 /* bem_facilApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bem_facilApp.swift; sourceTree = "<group>"; };
-		CEAFED092BD94D9C00621FF3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		CEAFED092BD94D9C00621FF3 /* Telainicio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Telainicio.swift; sourceTree = "<group>"; };
 		CEAFED0B2BD94D9D00621FF3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CEAFED0E2BD94D9D00621FF3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -49,6 +50,7 @@
 		4A4844922BDFB6730075B6AF /* App */ = {
 			isa = PBXGroup;
 			children = (
+				CEAFED092BD94D9C00621FF3 /* Telainicio.swift */,
 				CEAFED072BD94D9C00621FF3 /* bem_facilApp.swift */,
 			);
 			path = App;
@@ -97,12 +99,12 @@
 		CEAFED062BD94D9C00621FF3 /* bem-facil */ = {
 			isa = PBXGroup;
 			children = (
+				CE8949DE2BDFCBB000D6F5DD /* Info.plist */,
 				4A4844922BDFB6730075B6AF /* App */,
 				4A4844912BDFB65E0075B6AF /* Resources */,
 				4A4844932BDFB6910075B6AF /* Utils */,
 				4A4844962BDFB6B20075B6AF /* Models */,
 				4A4844992BDFB6D00075B6AF /* Features */,
-				CEAFED092BD94D9C00621FF3 /* ContentView.swift */,
 				CEAFED0D2BD94D9D00621FF3 /* Preview Content */,
 			);
 			path = "bem-facil";
@@ -208,7 +210,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CEAFED0A2BD94D9C00621FF3 /* ContentView.swift in Sources */,
+				CEAFED0A2BD94D9C00621FF3 /* Telainicio.swift in Sources */,
 				4A4844952BDFB69F0075B6AF /* Util.swift in Sources */,
 				CEAFED082BD94D9C00621FF3 /* bem_facilApp.swift in Sources */,
 				4A4844982BDFB6C50075B6AF /* Models.swift in Sources */,
@@ -348,9 +350,9 @@
 				DEVELOPMENT_ASSET_PATHS = "\"bem-facil/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "bem-facil/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -376,9 +378,9 @@
 				DEVELOPMENT_ASSET_PATHS = "\"bem-facil/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "bem-facil/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
