@@ -9,7 +9,11 @@ import SwiftUI
 
 struct CardInicial: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Text("Card inicial")
+            .background(Color.white)
+            .frame(width:350, height:180, alignment:.leading,)
+            .background(Color.black)
+            .cornerRadius(27)
     }
 }
 
