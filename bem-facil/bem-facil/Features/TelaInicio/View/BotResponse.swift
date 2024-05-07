@@ -22,7 +22,7 @@ func getResponse(message: String) -> String {
     for (pattern, response) in questionPatterns {
         if tempMessage.range(of: ".*\\b(\(pattern))\\b.*", options: .regularExpression) != nil {
             return response
-        }
+    }
     }
     
     if tempMessage.range(of: ".*\\b(ola|hola|oi)\\b.*", options: .regularExpression) != nil {
@@ -33,4 +33,3 @@ func getResponse(message: String) -> String {
     
     return "Desculpe, não entendi. Por favor, tente novamente ou entre em contato conosco para obter mais ajuda."
 }
-
