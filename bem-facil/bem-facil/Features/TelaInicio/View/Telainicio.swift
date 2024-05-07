@@ -12,7 +12,7 @@ struct Telainicio: View {
     @State private var searchText: String = ""
     
     var body: some View {
-        VStack (alignment: .center) {
+        VStack(alignment: .center) {
             Image("logo")
                 .resizable()
                 .aspectRatio(contentMode: .fill)
@@ -21,10 +21,10 @@ struct Telainicio: View {
             SearchBar(searchText: searchText)
             
         }
-        ScrollView (.horizontal) {
+        ScrollView(.horizontal) {
 //            Spacer()
-            HStack (spacing:18) {
-                ForEach(0..<3){ index in
+            HStack(spacing:18) {
+                ForEach(0..<3) { _ in
                     Text("")
                         .foregroundStyle(.white)
                         .font(.largeTitle)
@@ -40,8 +40,8 @@ struct Telainicio: View {
         
         ScrollView {
             HStack {
-                VStack (spacing:20) {
-                    ForEach(0..<5){ index in
+                VStack(spacing:20) {
+                    ForEach(0..<5) { _ in
                         Text("")
                             .foregroundStyle(.white)
                             .font(.largeTitle)
@@ -51,8 +51,8 @@ struct Telainicio: View {
                         
                                     }
                 }
-                VStack (spacing:20) {
-                    ForEach(0..<5){ index in
+                VStack(spacing:20) {
+                    ForEach(0..<5) { _ in
                         Text("")
                             .foregroundStyle(.white)
                             .font(.largeTitle)
@@ -72,8 +72,6 @@ struct Telainicio: View {
         }
 
     }
-
-
 #Preview {
     Telainicio()
 }
