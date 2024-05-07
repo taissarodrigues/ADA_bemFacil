@@ -10,6 +10,7 @@
 		4A4844952BDFB69F0075B6AF /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4844942BDFB69F0075B6AF /* Util.swift */; };
 		4A4844982BDFB6C50075B6AF /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4844972BDFB6C50075B6AF /* Models.swift */; };
 		4A48449B2BDFB6E40075B6AF /* Features.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A48449A2BDFB6E40075B6AF /* Features.swift */; };
+		CE42FEBD2BE901BF002C0792 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE42FEBC2BE901BF002C0792 /* SearchBar.swift */; };
 		CEAFED082BD94D9C00621FF3 /* bem_facilApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAFED072BD94D9C00621FF3 /* bem_facilApp.swift */; };
 		CEAFED0A2BD94D9C00621FF3 /* Telainicio.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAFED092BD94D9C00621FF3 /* Telainicio.swift */; };
 		CEAFED0C2BD94D9D00621FF3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEAFED0B2BD94D9D00621FF3 /* Assets.xcassets */; };
@@ -20,6 +21,7 @@
 		4A4844942BDFB69F0075B6AF /* Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
 		4A4844972BDFB6C50075B6AF /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		4A48449A2BDFB6E40075B6AF /* Features.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Features.swift; sourceTree = "<group>"; };
+		CE42FEBC2BE901BF002C0792 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		CE8949DE2BDFCBB000D6F5DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		CEAFED042BD94D9C00621FF3 /* bem-facil.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "bem-facil.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEAFED072BD94D9C00621FF3 /* bem_facilApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bem_facilApp.swift; sourceTree = "<group>"; };
@@ -50,7 +52,6 @@
 		4A4844922BDFB6730075B6AF /* App */ = {
 			isa = PBXGroup;
 			children = (
-				CEAFED092BD94D9C00621FF3 /* Telainicio.swift */,
 				CEAFED072BD94D9C00621FF3 /* bem_facilApp.swift */,
 			);
 			path = App;
@@ -75,9 +76,35 @@
 		4A4844992BDFB6D00075B6AF /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				8CAE5B942BEA52C4005B45E4 /* TelaInicio */,
 				4A48449A2BDFB6E40075B6AF /* Features.swift */,
 			);
 			path = Features;
+			sourceTree = "<group>";
+		};
+		8CAE5B942BEA52C4005B45E4 /* TelaInicio */ = {
+			isa = PBXGroup;
+			children = (
+				8CAE5B962BEA52E5005B45E4 /* Componentes */,
+				8CAE5B952BEA52D7005B45E4 /* View */,
+			);
+			path = TelaInicio;
+			sourceTree = "<group>";
+		};
+		8CAE5B952BEA52D7005B45E4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CEAFED092BD94D9C00621FF3 /* Telainicio.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8CAE5B962BEA52E5005B45E4 /* Componentes */ = {
+			isa = PBXGroup;
+			children = (
+				CE42FEBC2BE901BF002C0792 /* SearchBar.swift */,
+			);
+			path = Componentes;
 			sourceTree = "<group>";
 		};
 		CEAFECFB2BD94D9C00621FF3 = {
@@ -215,6 +242,7 @@
 				CEAFED082BD94D9C00621FF3 /* bem_facilApp.swift in Sources */,
 				4A4844982BDFB6C50075B6AF /* Models.swift in Sources */,
 				4A48449B2BDFB6E40075B6AF /* Features.swift in Sources */,
+				CE42FEBD2BE901BF002C0792 /* SearchBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
