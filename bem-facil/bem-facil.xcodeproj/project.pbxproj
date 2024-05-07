@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		27E7DC162BEA688A00B8F52B /* CardInicial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E7DC152BEA688A00B8F52B /* CardInicial.swift */; };
 		4A4844952BDFB69F0075B6AF /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4844942BDFB69F0075B6AF /* Util.swift */; };
 		4A4844982BDFB6C50075B6AF /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4844972BDFB6C50075B6AF /* Models.swift */; };
 		4A48449B2BDFB6E40075B6AF /* Features.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A48449A2BDFB6E40075B6AF /* Features.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		27E7DC152BEA688A00B8F52B /* CardInicial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardInicial.swift; sourceTree = "<group>"; };
 		4A4844942BDFB69F0075B6AF /* Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
 		4A4844972BDFB6C50075B6AF /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		4A48449A2BDFB6E40075B6AF /* Features.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Features.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				CE42FEBC2BE901BF002C0792 /* SearchBar.swift */,
+				27E7DC152BEA688A00B8F52B /* CardInicial.swift */,
 			);
 			path = Componentes;
 			sourceTree = "<group>";
@@ -243,6 +246,7 @@
 				4A4844982BDFB6C50075B6AF /* Models.swift in Sources */,
 				4A48449B2BDFB6E40075B6AF /* Features.swift in Sources */,
 				CE42FEBD2BE901BF002C0792 /* SearchBar.swift in Sources */,
+				27E7DC162BEA688A00B8F52B /* CardInicial.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
