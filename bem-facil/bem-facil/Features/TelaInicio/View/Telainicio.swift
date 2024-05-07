@@ -22,7 +22,6 @@ struct Telainicio: View {
             
         }
         ScrollView(.horizontal) {
-//            Spacer()
             HStack(spacing:18) {
                 ForEach(0..<3) { _ in
                     Text("")
@@ -31,7 +30,6 @@ struct Telainicio: View {
                         .frame(width: 343, height: 180)
                         .background(.black)
                         .cornerRadius(8.0)
-//                        .padding(.bottom, 200)
                                 }
                 }
 
