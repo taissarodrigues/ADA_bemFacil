@@ -31,9 +31,9 @@ struct ChatBot: View {
                                 .padding()
                                 .foregroundColor(.white)
                                 .background(.blue.opacity(0.8))
+                                .cornerRadius(10)
                                 .padding(.horizontal,16)
                                 .padding(.bottom,10)
-                                .cornerRadius(10)
                         }
                     } else {
                         HStack {
