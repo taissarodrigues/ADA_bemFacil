@@ -52,7 +52,6 @@
 		4A4844922BDFB6730075B6AF /* App */ = {
 			isa = PBXGroup;
 			children = (
-				CEAFED092BD94D9C00621FF3 /* Telainicio.swift */,
 				CEAFED072BD94D9C00621FF3 /* bem_facilApp.swift */,
 			);
 			path = App;
@@ -77,10 +76,35 @@
 		4A4844992BDFB6D00075B6AF /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				8CAE5B942BEA52C4005B45E4 /* TelaInicio */,
 				4A48449A2BDFB6E40075B6AF /* Features.swift */,
-				CE42FEBC2BE901BF002C0792 /* SearchBar.swift */,
 			);
 			path = Features;
+			sourceTree = "<group>";
+		};
+		8CAE5B942BEA52C4005B45E4 /* TelaInicio */ = {
+			isa = PBXGroup;
+			children = (
+				8CAE5B962BEA52E5005B45E4 /* Componentes */,
+				8CAE5B952BEA52D7005B45E4 /* View */,
+			);
+			path = TelaInicio;
+			sourceTree = "<group>";
+		};
+		8CAE5B952BEA52D7005B45E4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CEAFED092BD94D9C00621FF3 /* Telainicio.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8CAE5B962BEA52E5005B45E4 /* Componentes */ = {
+			isa = PBXGroup;
+			children = (
+				CE42FEBC2BE901BF002C0792 /* SearchBar.swift */,
+			);
+			path = Componentes;
 			sourceTree = "<group>";
 		};
 		CEAFECFB2BD94D9C00621FF3 = {
