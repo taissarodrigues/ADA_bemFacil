@@ -9,15 +9,16 @@ import SwiftUI
 
 class ChatBotViewModel: ObservableObject {
     @Published var messages: [String] = ["Bem vindo ao Faq do +Ben"]
+    @Published var messageText: String = ""
     
-    func sendMessage(message: String) {
+    func sendMessage() {
         withAnimation {
-            messages.append("[USER]" + message)
-//            self.messageText = ""
+            messages.append("[USER]" + messageText)
         }
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-                    let response = getResponse(message: message)
-                    self.messages.append(response) 
+            let response = getResponse(message: self.messageText)
+                    self.messages.append(response)
+            self.messageText = ""
                 }
     }
     

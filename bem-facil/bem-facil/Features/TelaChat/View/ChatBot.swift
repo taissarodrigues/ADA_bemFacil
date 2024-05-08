@@ -15,7 +15,9 @@ struct ChatBot: View {
         VStack {
             titleBar
             messagesComponent
+            
             inputSection
+                .padding()
         }
     }
     
@@ -64,28 +66,23 @@ struct ChatBot: View {
     }
     private var inputSection: some View {
         HStack {
-            TextField("Digite sua dúvida", text: $messageText)
+            TextField("Digite sua dúvida", text: $viewModel.messageText)
                 .padding()
                 .background(Color.gray.opacity(0.1))
                 .cornerRadius(10)
                 .onSubmit {
-                    sendMessage()
+                    viewModel.sendMessage()
                 }
             
-            Button(action: sendMessage) {
+            Button(action: viewModel.sendMessage) {
                 Image(systemName: "paperplane.fill")
                     .foregroundColor(Color.benUi(.azul))
             }
             .font(.system(size: 26))
             .padding(.horizontal, 10)
         }
-        .padding()
     }
     
-    func sendMessage() {
-        viewModel.sendMessage(message: messageText)
-        messageText = ""
-    }
 }
 #Preview {
     ChatBot()
