@@ -11,6 +11,8 @@
 		4A4844982BDFB6C50075B6AF /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4844972BDFB6C50075B6AF /* Models.swift */; };
 		4A48449B2BDFB6E40075B6AF /* Features.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A48449A2BDFB6E40075B6AF /* Features.swift */; };
 		8C0AC5CA2BEB9F18005466CD /* ChatBotViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0AC5C92BEB9F18005466CD /* ChatBotViewModel.swift */; };
+		8C0AC5CF2BEBAA59005466CD /* TokenColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0AC5CE2BEBAA59005466CD /* TokenColor.swift */; };
+		8C0AC5D12BEBAAE8005466CD /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0AC5D02BEBAAE8005466CD /* Question.swift */; };
 		8C5929282BEA993D0037C38D /* ChatBot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5929272BEA993D0037C38D /* ChatBot.swift */; };
 		8C59292C2BEAA3D00037C38D /* BotResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C59292B2BEAA3D00037C38D /* BotResponse.swift */; };
 		CE42FEBD2BE901BF002C0792 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE42FEBC2BE901BF002C0792 /* SearchBar.swift */; };
@@ -25,6 +27,8 @@
 		4A4844972BDFB6C50075B6AF /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		4A48449A2BDFB6E40075B6AF /* Features.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Features.swift; sourceTree = "<group>"; };
 		8C0AC5C92BEB9F18005466CD /* ChatBotViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBotViewModel.swift; sourceTree = "<group>"; };
+		8C0AC5CE2BEBAA59005466CD /* TokenColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenColor.swift; sourceTree = "<group>"; };
+		8C0AC5D02BEBAAE8005466CD /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		8C5929272BEA993D0037C38D /* ChatBot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBot.swift; sourceTree = "<group>"; };
 		8C59292B2BEAA3D00037C38D /* BotResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BotResponse.swift; sourceTree = "<group>"; };
 		CE42FEBC2BE901BF002C0792 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
@@ -66,6 +70,7 @@
 		4A4844932BDFB6910075B6AF /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				8C0AC5CD2BEBAA3B005466CD /* Tokens */,
 				4A4844942BDFB69F0075B6AF /* Util.swift */,
 			);
 			path = Utils;
@@ -89,19 +94,30 @@
 			path = Features;
 			sourceTree = "<group>";
 		};
-		8C0AC5CC2BEBA369005466CD /* ViewsModel */ = {
+		8C0AC5CC2BEBA369005466CD /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
 				8C0AC5C92BEB9F18005466CD /* ChatBotViewModel.swift */,
 				8C59292B2BEAA3D00037C38D /* BotResponse.swift */,
 			);
-			path = ViewsModel;
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		8C0AC5CD2BEBAA3B005466CD /* Tokens */ = {
+			isa = PBXGroup;
+			children = (
+				8C0AC5CE2BEBAA59005466CD /* TokenColor.swift */,
+			);
+			path = Tokens;
 			sourceTree = "<group>";
 		};
 		8C59292D2BEABF2D0037C38D /* TelaChat */ = {
 			isa = PBXGroup;
 			children = (
+				8C5929312BEAC06C0037C38D /* Model */,
 				8C59292E2BEABF960037C38D /* Componentes */,
+				8C5929302BEABFC00037C38D /* View */,
+				8C0AC5CC2BEBA369005466CD /* ViewModel */,
 			);
 			path = TelaChat;
 			sourceTree = "<group>";
@@ -109,7 +125,6 @@
 		8C59292E2BEABF960037C38D /* Componentes */ = {
 			isa = PBXGroup;
 			children = (
-				8C5929302BEABFC00037C38D /* View */,
 			);
 			path = Componentes;
 			sourceTree = "<group>";
@@ -118,17 +133,16 @@
 			isa = PBXGroup;
 			children = (
 				8C5929272BEA993D0037C38D /* ChatBot.swift */,
-				8C0AC5CC2BEBA369005466CD /* ViewsModel */,
-				8C5929312BEAC06C0037C38D /* Models */,
 			);
 			path = View;
 			sourceTree = "<group>";
 		};
-		8C5929312BEAC06C0037C38D /* Models */ = {
+		8C5929312BEAC06C0037C38D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				8C0AC5D02BEBAAE8005466CD /* Question.swift */,
 			);
-			path = Models;
+			path = Model;
 			sourceTree = "<group>";
 		};
 		8CAE5B942BEA52C4005B45E4 /* TelaInicio */ = {
@@ -291,9 +305,11 @@
 				CEAFED0A2BD94D9C00621FF3 /* Telainicio.swift in Sources */,
 				8C5929282BEA993D0037C38D /* ChatBot.swift in Sources */,
 				4A4844952BDFB69F0075B6AF /* Util.swift in Sources */,
+				8C0AC5CF2BEBAA59005466CD /* TokenColor.swift in Sources */,
 				CEAFED082BD94D9C00621FF3 /* bem_facilApp.swift in Sources */,
 				4A4844982BDFB6C50075B6AF /* Models.swift in Sources */,
 				4A48449B2BDFB6E40075B6AF /* Features.swift in Sources */,
+				8C0AC5D12BEBAAE8005466CD /* Question.swift in Sources */,
 				CE42FEBD2BE901BF002C0792 /* SearchBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
