@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ChatBot: View {
     @State private var messageText = ""
-    @State var messages: [String] = ["Bem vindo ao Faq do +Ben"]
+    @ObservedObject var viewModel = ChatBotViewModel()
     
     var body: some View {
         VStack {
@@ -22,7 +22,7 @@ struct ChatBot: View {
                     .foregroundColor(Color("azul"))
             }
             ScrollView {
-                ForEach(messages, id: \.self) { messsage in
+                ForEach(viewModel.messages, id: \.self) { messsage in
                     if messsage.contains("[USER]") {
                         let newMessage = messsage.replacingOccurrences(of: "[USER]", with: "")
                         HStack {
@@ -55,36 +55,26 @@ struct ChatBot: View {
                     .background(Color.gray.opacity(0.1))
                     .cornerRadius(10)
                     .onSubmit {
-                        sendMessage(message: messageText)
+                        sendMessage()
                     }
-                Button {
-                    sendMessage(message: messageText)
-                } label: {
+                Button(action: sendMessage) {
                     Image(systemName: "paperplane.fill")
                         .foregroundColor(Color("azul"))
-                    
                 }
                 .font(.system(size: 26))
-                .padding(.horizontal,10)
+                .padding(.horizontal, 10)
             }
             .padding()
+            
         }
     }
-    func sendMessage(message: String) {
-        withAnimation {
-            messages.append("[USER]" + message)
-            self.messageText = ""
-        }
-    DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-        withAnimation {
-            messages.append(getResponse(message: message))
-                    
-                }
-            }
+    func sendMessage() {
+        viewModel.sendMessage(message: messageText)
+        messageText = "
     }
     
+    
 }
-
 #Preview {
     ChatBot()
 }
