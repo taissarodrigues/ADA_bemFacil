@@ -9,13 +9,26 @@ import SwiftUI
 
 struct CardInicial: View {
     var body: some View {
-        Text("Card inicial")
-            .background(Color.white)
-            .frame(width:350, height:180, alignment:.leading,)
-            .background(Color.black)
-            .cornerRadius(27)
-    }
+            HStack {
+            Rectangle()
+                    .fill(Color.white)
+                .frame(width: 360, height: 200)
+                .cornerRadius(25.0)
+                .overlay(
+            Rectangle()
+                .fill(Color.white)
+                .frame(width: 160, height: 160)
+                .cornerRadius(25.0)
+                .padding(.leading, 160)
+            )
+                }
+                .frame(width:370, height: 170)
+                .shadow(color: .black.opacity(10.0) , radius: 10.0, x: 0.0, y: 0.0)
+            
 }
+    
+        }
+    
 
 #Preview {
     CardInicial()
