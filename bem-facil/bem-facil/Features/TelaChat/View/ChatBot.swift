@@ -19,7 +19,7 @@ struct ChatBot: View {
                     .bold()
                 Image(systemName: "bubble.left.fill")
                     .font(.system(size: 26))
-                    .foregroundColor(Color.benUI(.azul))
+                    .foregroundColor(Color.benUi(.azul))
             }
             ScrollView {
                 ForEach(viewModel.messages, id: \.self) { messsage in
@@ -30,7 +30,7 @@ struct ChatBot: View {
                             Text(newMessage)
                                 .padding()
                                 .foregroundColor(.white)
-                                .background(Color.benUI(.azul).opacity(0.8))
+                                .background(Color.benUi(.azul).opacity(0.8))
                                 .cornerRadius(10)
                                 .padding(.horizontal,16)
                                 .padding(.bottom,10)
@@ -59,7 +59,7 @@ struct ChatBot: View {
                     }
                 Button(action: sendMessage) {
                     Image(systemName: "paperplane.fill")
-                        .foregroundColor(Color.benUI(.azul))
+                        .foregroundColor(Color.benUi(.azul))
                 }
                 .font(.system(size: 26))
                 .padding(.horizontal, 10)

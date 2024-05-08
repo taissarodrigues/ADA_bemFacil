@@ -10,8 +10,6 @@ import SwiftUI
 struct Telainicio: View {
     
     @State private var searchText: String = ""
-    
-    
     var body: some View {
         VStack(alignment: .center) {
             Image("logo")

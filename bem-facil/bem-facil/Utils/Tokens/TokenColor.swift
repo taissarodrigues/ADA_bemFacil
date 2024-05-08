@@ -15,7 +15,7 @@ enum ColorCase {
 }
 extension Color {
     static func benUi(_ colorCase: ColorCase) -> Color {
-        let baseColor = BaseColor()
+        _ = BaseColor()
         switch colorCase {
         case .azul:
             return BaseColor.azul
