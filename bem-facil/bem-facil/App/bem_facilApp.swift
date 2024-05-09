@@ -11,7 +11,8 @@ import SwiftUI
 struct BemFacilApp: App {
     var body: some Scene {
         WindowGroup {
-            Telainicio()
+//            Telainicio()
+            ChatBot()
         }
     }
 }
