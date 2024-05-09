@@ -19,8 +19,8 @@ class ChatBotViewModel: ObservableObject {
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             let response = getResponse(message: temporaryMessage)
                     self.messages.append(response)
-            self.messageText = ""
         }
+        self.messageText = ""
     }
     
 }
