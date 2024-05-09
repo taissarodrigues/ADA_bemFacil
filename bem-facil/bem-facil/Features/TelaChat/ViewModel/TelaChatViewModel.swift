@@ -12,14 +12,15 @@ class ChatBotViewModel: ObservableObject {
     @Published var messageText: String = ""
     
     func sendMessage() {
+        let temporaryMessage = messageText
         withAnimation {
             messages.append("[USER]" + messageText)
         }
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-            let response = getResponse(message: self.messageText)
+            let response = getResponse(message: temporaryMessage)
                     self.messages.append(response)
             self.messageText = ""
-                }
+        }
     }
     
 }
