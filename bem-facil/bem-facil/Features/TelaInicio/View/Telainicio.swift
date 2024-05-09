@@ -19,6 +19,7 @@ struct Telainicio: View {
                 .frame(width: 50,height: 50)
             
             SearchBar(searchText: searchText)
+            CardInicial()
             
         }
         ScrollView(.horizontal) {

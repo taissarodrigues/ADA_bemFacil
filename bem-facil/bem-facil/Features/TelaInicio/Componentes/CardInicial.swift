@@ -9,27 +9,37 @@ import SwiftUI
 
 struct CardInicial: View {
     var body: some View {
+        VStack {
+            Text("Programa")
+                .font(.system(size:28, weight:.bold ))
+                
+            
             HStack {
-            Rectangle()
-                    .fill(Color.white)
-                .frame(width: 360, height: 200)
-                .cornerRadius(25.0)
-                .overlay(
+                Text("Informações")
+                Spacer().frame(width: 250)
+                Image(systemName: "star.fill")
+            }
+            
+            
+        }
+        .frame(width: .infinity, height: 200)
+        .background(
             Rectangle()
                 .fill(Color.white)
-                .frame(width: 160, height: 160)
+                .frame(width: .infinity, height: 170)
                 .cornerRadius(25.0)
-                .padding(.leading, 160)
-            )
-                }
-                .frame(width:370, height: 170)
-                .shadow(color: .black.opacity(10.0) , radius: 10.0, x: 0.0, y: 0.0)
-            
+                .frame(width: 370, height: 170)
+        )
+    }
+    
 }
-    
-        }
-    
+
 
 #Preview {
     CardInicial()
+        .background(content: {
+            Rectangle()
+                .frame(width: 500, height: 500)
+                .foregroundStyle(.blue)
+        })
 }
