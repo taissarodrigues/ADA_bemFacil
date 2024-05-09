@@ -22,8 +22,3 @@ class ViewModel: ObservableObject {
     Model(title: "Dignidade Menstrual", subTitle: "Saúde", image:UIImage(imageLiteralResourceName: "imageCard1"))
     ]
 }
-//#if DEBUG
-//#Preview {
-//    CardsInfo()
-//}
-//#endif
