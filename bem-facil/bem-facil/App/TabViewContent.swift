@@ -11,15 +11,23 @@ struct TabViewContent: View {
     var body: some View {
         
         TabView {
-            Text("adasd")
+            Telainicio()
                 .tabItem {
-                    Label ("First", systemImage: "1.circle" )
+                    Label("Programas", systemImage: "house.fill" )
+                }
+            ChatBot()
+                .tabItem {
+                    Label("Dúvidas", systemImage: "questionmark")
+                }
+            Text("Pontos")
+                .tabItem {
+                    Label("Pontos", systemImage: "map.fill")
                 }
         }
+//        .accentColor()
     }
 }
 
 #Preview {
     TabViewContent()
 }
-

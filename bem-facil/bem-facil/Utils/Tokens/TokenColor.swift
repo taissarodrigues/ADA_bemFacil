@@ -9,16 +9,19 @@ import SwiftUI
 
 private struct BaseColor {
     static let azul = Color("Azul")
+    static let myblue = Color("MyBlue")
 }
 enum ColorCase {
     case azul
+    case myblue
 }
 extension Color {
     static func benUi(_ colorCase: ColorCase) -> Color {
-        _ = BaseColor()
         switch colorCase {
         case .azul:
             return BaseColor.azul
+        case .myblue:
+            return BaseColor.myblue
         }
     }
     
