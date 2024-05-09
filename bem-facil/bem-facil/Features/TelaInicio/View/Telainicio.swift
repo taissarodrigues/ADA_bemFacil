@@ -13,30 +13,15 @@ struct Telainicio: View {
     
     var body: some View {
         VStack(alignment: .center) {
-            Image("logo")
-                .resizable()
-                .aspectRatio(contentMode: .fill)
-                .frame(width: 50,height: 50)
-            
             SearchBar(searchText: searchText)
+            
+            Text("Conheça as novidades")
+                .font(.system(size:29, weight:.bold ))
+                .padding(.trailing,50)
             CardInicial()
             
+            
         }
-        ScrollView(.horizontal) {
-            HStack(spacing:18) {
-                ForEach(0..<3) { _ in
-                    Text("")
-                        .foregroundStyle(.white)
-                        .font(.largeTitle)
-                        .frame(width: 343, height: 180)
-                        .background(.black)
-                        .cornerRadius(8.0)
-                                }
-                }
-
-       }
-        .scrollIndicators(.hidden)
-        
         ScrollView {
             HStack {
                 VStack(spacing:20) {
