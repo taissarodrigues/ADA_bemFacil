@@ -10,13 +10,14 @@
 		4A4844952BDFB69F0075B6AF /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4844942BDFB69F0075B6AF /* Util.swift */; };
 		4A4844982BDFB6C50075B6AF /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4844972BDFB6C50075B6AF /* Models.swift */; };
 		4A48449B2BDFB6E40075B6AF /* Features.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A48449A2BDFB6E40075B6AF /* Features.swift */; };
-		4A893CE92BEE4DC10030430B /* CardInfosModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A893CE82BEE4DC10030430B /* CardInfosModel.swift */; };
+		4A893CE92BEE4DC10030430B /* CardInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A893CE82BEE4DC10030430B /* CardInfoModel.swift */; };
 		8C0AC5CA2BEB9F18005466CD /* TelaChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0AC5C92BEB9F18005466CD /* TelaChatViewModel.swift */; };
 		8C0AC5CF2BEBAA59005466CD /* TokenColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0AC5CE2BEBAA59005466CD /* TokenColor.swift */; };
 		8C0AC5D12BEBAAE8005466CD /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0AC5D02BEBAAE8005466CD /* Question.swift */; };
 		8C53CD042BED059B00BCBDA2 /* CustomCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C53CD032BED059B00BCBDA2 /* CustomCard.swift */; };
 		8C53CD062BED0A8200BCBDA2 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C53CD052BED0A8200BCBDA2 /* File.swift */; };
 		8C5929282BEA993D0037C38D /* ChatBot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5929272BEA993D0037C38D /* ChatBot.swift */; };
+		8CAC33782BEE5E0C00D23F14 /* CardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAC33772BEE5E0C00D23F14 /* CardViewModel.swift */; };
 		CE42FEBD2BE901BF002C0792 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE42FEBC2BE901BF002C0792 /* SearchBar.swift */; };
 		CEAFED082BD94D9C00621FF3 /* bem_facilApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAFED072BD94D9C00621FF3 /* bem_facilApp.swift */; };
 		CEAFED0A2BD94D9C00621FF3 /* Telainicio.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAFED092BD94D9C00621FF3 /* Telainicio.swift */; };
@@ -28,13 +29,14 @@
 		4A4844942BDFB69F0075B6AF /* Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
 		4A4844972BDFB6C50075B6AF /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		4A48449A2BDFB6E40075B6AF /* Features.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Features.swift; sourceTree = "<group>"; };
-		4A893CE82BEE4DC10030430B /* CardInfosModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardInfosModel.swift; sourceTree = "<group>"; };
+		4A893CE82BEE4DC10030430B /* CardInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardInfoModel.swift; sourceTree = "<group>"; };
 		8C0AC5C92BEB9F18005466CD /* TelaChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelaChatViewModel.swift; sourceTree = "<group>"; };
 		8C0AC5CE2BEBAA59005466CD /* TokenColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenColor.swift; sourceTree = "<group>"; };
 		8C0AC5D02BEBAAE8005466CD /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		8C53CD032BED059B00BCBDA2 /* CustomCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCard.swift; sourceTree = "<group>"; };
 		8C53CD052BED0A8200BCBDA2 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		8C5929272BEA993D0037C38D /* ChatBot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBot.swift; sourceTree = "<group>"; };
+		8CAC33772BEE5E0C00D23F14 /* CardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewModel.swift; sourceTree = "<group>"; };
 		CE42FEBC2BE901BF002C0792 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		CE8949DE2BDFCBB000D6F5DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		CEAFED042BD94D9C00621FF3 /* bem-facil.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "bem-facil.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -101,7 +103,7 @@
 		4A893CE72BEE4DB20030430B /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				4A893CE82BEE4DC10030430B /* CardInfosModel.swift */,
+				4A893CE82BEE4DC10030430B /* CardInfoModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -157,9 +159,18 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		8CAC33762BEE5DBB00D23F14 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				8CAC33772BEE5E0C00D23F14 /* CardViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		8CAE5B942BEA52C4005B45E4 /* TelaInicio */ = {
 			isa = PBXGroup;
 			children = (
+				8CAC33762BEE5DBB00D23F14 /* ViewModel */,
 				4A893CE72BEE4DB20030430B /* Model */,
 				8CAE5B962BEA52E5005B45E4 /* Componentes */,
 				8CAE5B952BEA52D7005B45E4 /* View */,
@@ -323,7 +334,8 @@
 				4A4844982BDFB6C50075B6AF /* Models.swift in Sources */,
 				8C53CD042BED059B00BCBDA2 /* CustomCard.swift in Sources */,
 				4A48449B2BDFB6E40075B6AF /* Features.swift in Sources */,
-				4A893CE92BEE4DC10030430B /* CardInfosModel.swift in Sources */,
+				8CAC33782BEE5E0C00D23F14 /* CardViewModel.swift in Sources */,
+				4A893CE92BEE4DC10030430B /* CardInfoModel.swift in Sources */,
 				8C53CD062BED0A8200BCBDA2 /* File.swift in Sources */,
 				8C0AC5D12BEBAAE8005466CD /* Question.swift in Sources */,
 				CE42FEBD2BE901BF002C0792 /* SearchBar.swift in Sources */,

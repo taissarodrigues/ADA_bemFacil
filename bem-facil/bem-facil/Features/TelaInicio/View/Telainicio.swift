@@ -10,15 +10,13 @@ import SwiftUI
 struct Telainicio: View {
     
     @State private var searchText: String = ""
+    
+    let adaptiveColumns = [
+            GridItem(.adaptive(minimum: 130))
+        ]
     var body: some View {
-        VStack(alignment: .center) {
-            Image("logo")
-                .resizable()
-                .aspectRatio(contentMode: .fill)
-                .frame(width: 50,height: 50)
-            
+        VStack {
             SearchBar(searchText: searchText)
-            
         }
         ScrollView(.horizontal) {
             HStack(spacing:18) {
@@ -29,46 +27,28 @@ struct Telainicio: View {
                         .frame(width: 343, height: 180)
                         .background(.black)
                         .cornerRadius(8.0)
-                                }
                 }
-
-       }
-        .scrollIndicators(.hidden)
-        
-        ScrollView {
-            HStack {
-                VStack(spacing:20) {
-                    ForEach(0..<5) { _ in
-                        Text("")
-                            .foregroundStyle(.white)
-                            .font(.largeTitle)
-                            .frame(width: 150, height: 150)
-                            .background(.red)
-                            .cornerRadius(5.0)
-                        
-                                    }
-                }
-                VStack(spacing:20) {
-                    ForEach(0..<5) { _ in
-                        Text("")
-                            .foregroundStyle(.white)
-                            .font(.largeTitle)
-                            .frame(width: 150, height: 150)
-                           
-                            .background(.red)
-                            .cornerRadius(5.0)
-                           
-                    }
-                }
-                
             }
-            .padding(.bottom,200 )
-
-            }
-        
         }
-
+        .scrollIndicators(.hidden)
+        NavigationView {
+            ScrollView {
+                LazyVGrid(columns: adaptiveColumns, spacing: 10) {
+                    ForEach(CardViewModel.date) { items in
+                        CustomCard(model: items)
+                        
+                    }
+//                    .padding(.horizontal, 10)
+                    .navigationTitle(Text("Programas"))
+                }
+            }
+        }
+        //            .padding(.bottom,200 )
+        
     }
+    
+}
+
 #Preview {
     Telainicio()
 }
