@@ -16,7 +16,12 @@ struct CustomCard: View {
             Image(uiImage: model.image)
                 .aspectRatio(contentMode: .fill)
                 .frame(width: 159, height: 123)
-            
+            LinearGradient(gradient: Gradient(colors: [(Color.benUi(.azul3)),
+                                                    Color.benUi(.azul)]),
+           startPoint: .center, endPoint: .bottom)
+            .opacity(0.3)
+            .frame(width: 163,height: 163)
+            .cornerRadius(20)
             
             VStack(alignment: .leading, spacing: 4) {
                 Text(model.title)
@@ -37,23 +42,21 @@ struct CustomCard: View {
                     )
                 
             }
+            
             .offset(x: -25)
             .padding(.top,25)
             
         }
-        .background(Color.white.opacity(0)
+        
+        .background(Color.benUi(.azulClaro)
             .frame(width: 163, height: 163)
             .cornerRadius(20)
-            .overlay(
-                LinearGradient(gradient: Gradient(colors: [(Color.benUi(.azulClaro)).opacity(3), Color.benUi(.azul).opacity(0.5)]),
-                               startPoint: .center, endPoint: .bottom)
-                            )
+            
         )
     }
     
 }
-#if DEBUG
+
 #Preview {
     CustomCard(model: Model(title: "Pé de Meia", subTitle: "Educação", image: UIImage(imageLiteralResourceName: "imageCard1")))
 }
-#endif
