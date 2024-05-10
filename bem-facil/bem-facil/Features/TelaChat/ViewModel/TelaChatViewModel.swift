@@ -22,6 +22,7 @@ class ChatBotViewModel: ObservableObject {
         }
         self.messageText = ""
     }
+    
     func getResponse(message: String) -> String {
         let tempMessage = message.lowercased().folding(options: .diacriticInsensitive, locale: nil)
         
@@ -42,7 +43,4 @@ class ChatBotViewModel: ObservableObject {
         return "Desculpe, não entendi. Por favor, tente novamente ou entre em contato conosco para obter mais ajuda."
     }
     
-}
-#Preview {
-    ChatBot()
 }

@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct TabViewContent: View {
+    @ObservedObject var chatBotViewModel = ChatBotViewModel()
+    
     var body: some View {
         
         TabView {
@@ -16,6 +18,7 @@ struct TabViewContent: View {
                     Label("Programas", systemImage: "house.fill" )
                 }
             ChatBot()
+                .environmentObject(chatBotViewModel)
                 .tabItem {
                     Label("Dúvidas", systemImage: "questionmark")
                 }
