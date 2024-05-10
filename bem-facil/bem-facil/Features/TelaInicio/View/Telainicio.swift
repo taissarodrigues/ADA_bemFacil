@@ -19,7 +19,7 @@ struct Telainicio: View {
             SearchBar(searchText: searchText)
         }
         ScrollView(.horizontal) {
-            HStack(spacing:18) {
+            HStack(spacing:20) {
                 ForEach(0..<3) { _ in
                     Text("")
                         .foregroundStyle(.white)
