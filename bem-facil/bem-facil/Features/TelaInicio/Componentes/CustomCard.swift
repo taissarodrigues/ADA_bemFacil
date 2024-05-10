@@ -9,16 +9,16 @@ import SwiftUI
 
 struct CustomCard: View {
     
-    var model: Model
+    var model: CardInfoModel
     
     var body: some View {
         ZStack {
-            Image(uiImage: model.image)
+            model.image
                 .aspectRatio(contentMode: .fill)
                 .frame(width: 159, height: 123)
             LinearGradient(gradient: Gradient(colors: [(Color.benUi(.azul3)),
-                                                    Color.benUi(.azul)]),
-           startPoint: .center, endPoint: .bottom)
+                                                       Color.benUi(.azul)]),
+                           startPoint: .center, endPoint: .bottom)
             .opacity(0.3)
             .frame(width: 163,height: 163)
             .cornerRadius(20)
@@ -40,23 +40,20 @@ struct CustomCard: View {
                             .cornerRadius(100)
                             .foregroundColor(Color.benUi(.azulClaro))
                     )
-                
             }
-            
             .offset(x: -25)
             .padding(.top,25)
             
         }
-        
         .background(Color.benUi(.azulClaro)
             .frame(width: 163, height: 163)
             .cornerRadius(20)
-            
+                    
         )
     }
     
 }
 
 #Preview {
-    CustomCard(model: Model(title: "Pé de Meia", subTitle: "Educação", image: UIImage(imageLiteralResourceName: "imageCard1")))
+    CustomCard(model: CardInfoModel(title: "Pé de Meia", subTitle: "Educação", image: Image(.imageCard1)))
 }
