@@ -27,7 +27,7 @@ struct CustomCard: View {
                .frame(width: 163,height: 163)
                .mask(RoundedRectangle(cornerRadius: 20))
                
-               VStack(alignment: .leading, spacing: -25){
+               VStack(alignment: .leading, spacing: -25) {
                    Text(model.title)
                        .font(.system(size: 17, weight: .bold))
                        .foregroundStyle(.white)

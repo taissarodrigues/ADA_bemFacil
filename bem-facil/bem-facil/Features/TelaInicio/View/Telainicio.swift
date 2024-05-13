@@ -14,6 +14,9 @@ struct Telainicio: View {
     let adaptiveColumns = Array(repeating: GridItem(.fixed(170)), count: 2)
     
     var body: some View {
+        NavigationView {
+        
+        
         VStack {
             SearchBar(searchText: searchText)
             
@@ -30,20 +33,23 @@ struct Telainicio: View {
                 }
             }
             .scrollIndicators(.hidden)
-            NavigationView {
-                ScrollView {
-                    LazyVGrid(columns: adaptiveColumns, spacing: 10) {
-                        ForEach(CardInfoModel.date) { items in
-                            CustomCard(model: items)
-                            
+            
+           
+                            ScrollView {
+                                LazyVGrid(columns: adaptiveColumns, spacing: 10) {
+                                    ForEach(CardInfoModel.date) { item in
+                                        NavigationLink(destination: Text("Teste")) {
+                                            CustomCard(model: item)
+                                        }
+                                    }
+                                }
+                                .navigationTitle(Text(""))
+                            }
                         }
-                        .navigationTitle(Text("Programas"))
                     }
                 }
             }
-        }
-    }
-}
+
 #Preview {
     Telainicio()
 }

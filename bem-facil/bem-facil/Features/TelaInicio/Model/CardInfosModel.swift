@@ -21,6 +21,5 @@ struct CardInfoModel: Identifiable {
         CardInfoModel(title: "Farmacia Popular", subTitle: "Saúde", image: Image(.farmacia)),
         CardInfoModel(title: "Minha Casa,Minha Vida", subTitle: "Educação", image: Image(.mcmv)),
         CardInfoModel(title: "Dignidade Menstrual", subTitle: "Saúde", image: Image(.pedemeia)),
-        CardInfoModel(title: "Dignidade Menstrual", subTitle: "Saúde", image: Image(.pedemeia)),
     ]
 }
