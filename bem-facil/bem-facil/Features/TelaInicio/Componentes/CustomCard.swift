@@ -40,12 +40,12 @@ struct CustomCard: View {
                     .foregroundColor(Color.benUi(.azul))
                     .background(
                         Rectangle()
-                        
+                            .foregroundStyle(Color.azulClaro)
                             .cornerRadius(20)
-                            .foregroundColor(Color.benUi(.azulClaro))
                     ).padding()
 
-            }.frame(maxWidth: 163, alignment: .leading)
+            }
+            .frame(maxWidth: 163, alignment: .leading)
                 .frame(maxHeight: 163, alignment: .bottom)
         
         }
