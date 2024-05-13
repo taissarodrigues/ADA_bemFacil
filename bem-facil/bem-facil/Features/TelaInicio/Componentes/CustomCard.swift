@@ -55,5 +55,5 @@ struct CustomCard: View {
 }
 
 #Preview {
-    CustomCard(model: CardInfoModel(title: "Pé de Meia", subTitle: "Educação", image: Image(.imageCard1)))
+    CustomCard(model: CardInfoModel(title: "Pé de Meia", subTitle: "Educação", image: Image(.pedemeia)))
 }

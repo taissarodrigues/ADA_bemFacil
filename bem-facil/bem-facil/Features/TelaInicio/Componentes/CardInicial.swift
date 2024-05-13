@@ -11,40 +11,30 @@ struct CardInicial: View {
     var body: some View {
         
         ScrollView(.horizontal) {
-            
             HStack {
-                ForEach(0..<5) { _ in
-                    VStack {
-                        Text("Programa")
+                ForEach(0 ..< InitialCardInfo.mockInfos.count) { card in
+                    ZStack {
+                        Text(InitialCardInfo.mockInfos[card].title)
                             .font(.system(size:28, weight:.bold ))
                             .padding(.trailing, 200)
-                            .padding(.top, 30)
+                            .padding(.bottom, 100)
                         
                         Spacer()
                         HStack {
-                            Text("Informações")
-                            Spacer().frame(width: 220)
+                            VStack {
+                                ForEach(0 ..< InitialCardInfo.mockInfos[card].info.count) { info in
+                                    Text(InitialCardInfo.mockInfos[card].info[info])
+                                        .
+                                        .frame(width: 100)
+                                
+                                }
+                            }
+                            Spacer()
+                            Image(.pedemeia)
+                                .padding(.bottom)
                         }
-                        
-                        .padding(.top,-76)
-                        HStack {
-                            Text("Informações")
-                            Spacer().frame(width: 200)
-                            Image(systemName: "star.fill")
-                        }
-                        .padding(.top, -120)
-                        
-                        HStack {
-                            Text("Informações")
-                            Spacer().frame(width: 220)
-                        }
-                        .padding(.top, -63)
-                        
-                        
                     }
-                    .padding(.horizontal, 30)
-                    
-                    .frame(width: .infinity, height: 200)
+                    .padding(.horizontal, 10)
                     .background(
                         Rectangle()
                             .fill(Color.white)
@@ -52,6 +42,7 @@ struct CardInicial: View {
                             .cornerRadius(25.0)
                             .frame(width: 370, height: 170)
                     )
+                    .frame(width: .infinity, height: 200)
                     
                 }
             }
