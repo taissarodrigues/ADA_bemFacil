@@ -44,8 +44,6 @@ struct Telainicio: View {
                 }
             }
         }
-        //            .padding(.bottom,200 )
-        
     }
     
 }
