@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "tipo_logo=farmacia.svg",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
