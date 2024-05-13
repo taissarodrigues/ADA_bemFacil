@@ -12,48 +12,46 @@ struct CustomCard: View {
     var model: CardInfoModel
     
     var body: some View {
-        ZStack {
-            model.image
-                .aspectRatio(contentMode: .fill)
-                .frame(width: 159, height: 123)
-            LinearGradient(gradient: Gradient(colors: [(Color.benUi(.azul3)),
-                                                       Color.benUi(.azul)]),
-                           startPoint: .center, endPoint: .bottom)
-            .opacity(0.3)
-            .frame(width: 163,height: 163)
-            .cornerRadius(20)
-            
-            VStack(alignment: .leading, spacing: 4) {
-                Text(model.title)
-                    .font(.system(size: 17, weight: .bold))
-                    .shadow(radius: 5)
-                    .foregroundStyle(.white)
-                    .padding(.top,80)
-                
-                Text(model.subTitle)
-                    .font(.system(size: 12))
-                    .foregroundColor(Color.benUi(.azul))
-                    .padding(0.10)
-                    .background(
-                        Rectangle()
-                            .frame(width: 65, height: 20)
-                            .cornerRadius(100)
-                            .foregroundColor(Color.benUi(.azulClaro))
-                    )
-            }
-            .offset(x: -25)
-            .padding(.top,25)
-            
-        }
-        .background(Color.benUi(.azulClaro)
-            .frame(width: 163, height: 163)
-            .cornerRadius(20)
-                    
-        )
-    }
-    
-}
+           ZStack {
+               RoundedRectangle(cornerRadius: 20)
+                   .foregroundColor(Color.benUi(.azulClaro))
+                   .frame(width: 163, height: 163)
+               model.image
+               
+               LinearGradient(gradient: Gradient(colors: [(
+                   Color.benUi(.azul3)),
+                   Color.benUi(.azul)
+               ]),
+               startPoint: .center, endPoint: .bottom)
+               .opacity(0.3)
+               .frame(width: 163,height: 163)
+               .mask(RoundedRectangle(cornerRadius: 20))
+               
+               VStack(alignment: .leading, spacing: -25) {
+                   Text(model.title)
+                       .font(.system(size: 17, weight: .bold))
+                       .foregroundStyle(.white)
+                       .shadow(radius: 5)
+                       .padding()
+
+                   Text(model.subTitle)
+                       .padding(5)
+                       .font(.system(size: 12))
+                       .foregroundColor(Color.benUi(.azul))
+                       .background(
+                           Rectangle()
+                                .cornerRadius(20)
+                               .foregroundColor(Color.benUi(.azulClaro))
+                       ).padding()
+
+               }.frame(maxWidth: 163, alignment: .leading)
+                   .frame(maxHeight: 163, alignment: .bottom)
+           
+           }
+           
+       }
+   }
 
 #Preview {
-    CustomCard(model: CardInfoModel(title: "Pé de Meia", subTitle: "Educação", image: Image(.imageCard1)))
+    CustomCard(model: CardInfoModel(title: "Pé de Meia", subTitle: "Educação", image: Image(.pedemeia)))
 }
