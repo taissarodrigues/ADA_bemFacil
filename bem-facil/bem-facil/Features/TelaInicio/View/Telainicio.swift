@@ -1,55 +1,143 @@
-//
-//  ContentView.swift
-//  bem-facil
-//
-//  Created by User on 24/04/24.
-//
-
 import SwiftUI
 
 struct Telainicio: View {
-    
     @State private var searchText: String = ""
+    @State private var isShowingFilter: Bool = false // Variável para mostrar/ocultar o Picker
+    @State private var selectedCategory: String = "Todos" // Inicia com "Todos"
+    
+    @State private var selection: CardInfoModel?
     
     let adaptiveColumns = Array(repeating: GridItem(.fixed(170)), count: 2)
     
+    var filteredData: [CardInfoModel] {
+        if selectedCategory == "Todos" {
+            return CardInfoModel.date
+        } else {
+            return CardInfoModel.date.filter { $0.subTitle == selectedCategory }
+        }
+    }
+    
     var body: some View {
-        NavigationView {
-        
-        
-        VStack {
-            SearchBar(searchText: searchText)
-            
-            ScrollView(.horizontal) {
-                HStack(spacing:18) {
-                    ForEach(0..<3) { _ in
-                        Text("")
-                            .foregroundStyle(.white)
-                            .font(.largeTitle)
-                            .frame(width: 343, height: 180)
-                            .background(.black)
-                            .cornerRadius(8.0)
+        NavigationStack {
+            List {
+                
+                Section {
+                    TabView {
+                        ForEach(0..<3) { _ in
+                            Text("")
+                                .foregroundStyle(.white)
+                                .font(.largeTitle)
+                                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                                .background(.black)
+                                .cornerRadius(8.0)
+                        }
                     }
+                    .tabViewStyle(.page(indexDisplayMode: .always))
+                    .frame(height: 200)
                 }
-            }
-            .scrollIndicators(.hidden)
-            
-           
-                            ScrollView {
-                                LazyVGrid(columns: adaptiveColumns, spacing: 10) {
-                                    ForEach(CardInfoModel.date) { item in
-                                        NavigationLink(destination: TelaInfo()) {
-                                            CustomCard(model: item)
-                                        }
-                                    }
-                                }
-                                .navigationTitle(Text(""))
+                
+//                Section {
+//                    ScrollView(.horizontal) {
+//                        HStack(spacing:18) {
+//                            ForEach(0..<3) { _ in
+//                                Text("")
+//                                    .foregroundStyle(.white)
+//                                    .font(.largeTitle)
+//                                    .frame(height: 180)
+//                                    .containerRelativeFrame(.horizontal, count: 10, span: 8, spacing: 0)
+//                                    .background(.black)
+//                                    .cornerRadius(8.0)
+//                            }
+//                        }
+//                        .scrollTargetLayout()
+//                    }
+//                    .scrollIndicators(.hidden)
+//                    .scrollTargetBehavior(.viewAligned)
+//                    
+//                }
+                
+                Section {
+                    LazyVGrid(columns: adaptiveColumns, spacing: 10) {
+                        ForEach(filteredData) { item in
+                            Button { 
+                                selection = item
+                            } label: {
+                                CustomCard(model: item)
+                                    .compositingGroup()
                             }
                         }
                     }
+                    .buttonStyle(.plain)
+                    .navigationDestination(item: $selection) { selection in
+                        TelaInfo(title: selection.title)
+                    }
+                } header: {
+                    HStack {
+                        Text("Programas")
+                        Spacer()
+                        Picker("Categoria", selection: $selectedCategory) {
+                            ForEach(["Todos", "Assistência Social", "Cultura", "Educação", "Saúde"], id: \.self) {
+                                Text($0)
+                            }
+                        }
+                        .pickerStyle(MenuPickerStyle())
+                    }
+                    .headerProminence(.increased)
+
                 }
             }
+            .listStyle(.plain)
+            .searchable(text: $searchText, placement: .navigationBarDrawer(displayMode: .always))
+            
+            
+//            VStack(alignment: .leading) {
+//                
+//            
+//                SearchBar(searchText: searchText)
+//                
+//                
+//                
+//                HStack() {
+//                    Text("Programas")
+//                        .font(.title)
+//                        .fontWeight(.bold)
+//                        .multilineTextAlignment(.leading)
+//                    //                        .padding(.leading)
+//                    Spacer()
+//                    Picker("Categoria", selection: $selectedCategory) {
+//                        ForEach(["Todos", "Assistência Social", "Cultura", "Educação", "Saúde"], id: \.self) {
+//                            Text($0)
+//                        }
+//                    }
+//                    .pickerStyle(MenuPickerStyle())
+//                    .padding(.trailing, 10)
+//                    
+//                    
+//                    
+////                    Image(systemName: "line.horizontal.3z.decrease.circle")
+////                        .foregroundColor(.blue)
+////                        .padding(.trailing)
+//                }
+//                .padding(.leading, 30)
+//                
+//                ScrollView {
+//                    LazyVGrid(columns: adaptiveColumns, spacing: 10) {
+//                        ForEach(filteredData) { item in
+//                            NavigationLink(destination: TelaInfo(title: item.title)) {
+//                                CustomCard(model: item)
+//                            }
+//                        }
+//                    }
+//                    .navigationTitle(Text(""))
+//                }
+//            }
+            
+        }
+    }
+}
 
-#Preview {
-    Telainicio()
+struct Telainicio_Previews: PreviewProvider {
+    static var previews: some View {
+        Telainicio()
+    }
 }

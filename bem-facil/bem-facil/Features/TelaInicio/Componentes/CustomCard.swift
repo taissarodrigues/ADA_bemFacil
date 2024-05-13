@@ -16,7 +16,7 @@ struct CustomCard: View {
                RoundedRectangle(cornerRadius: 20)
                    .foregroundColor(Color.benUi(.azulClaro))
                    .frame(width: 163, height: 163)
-               model.image
+               Image(model.image)
                
                LinearGradient(gradient: Gradient(colors: [(
                    Color.benUi(.azul3)),
@@ -53,5 +53,5 @@ struct CustomCard: View {
    }
 
 #Preview {
-    CustomCard(model: CardInfoModel(title: "Pé de Meia", subTitle: "Educação", image: Image(.pedemeia)))
+    CustomCard(model: CardInfoModel(title: "Pé de Meia", subTitle: "Educação", image: "pedemeia"))
 }
