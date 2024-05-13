@@ -38,7 +38,7 @@ struct Telainicio: View {
                             ScrollView {
                                 LazyVGrid(columns: adaptiveColumns, spacing: 10) {
                                     ForEach(CardInfoModel.date) { item in
-                                        NavigationLink(destination: Text("Teste")) {
+                                        NavigationLink(destination: TelaInfo()) {
                                             CustomCard(model: item)
                                         }
                                     }
