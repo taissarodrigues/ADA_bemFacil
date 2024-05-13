@@ -40,8 +40,7 @@ struct CustomCard: View {
                        .foregroundColor(Color.benUi(.azul))
                        .background(
                            Rectangle()
-                           
-                               .cornerRadius(20)
+                                .cornerRadius(20)
                                .foregroundColor(Color.benUi(.azulClaro))
                        ).padding()
 
@@ -54,5 +53,5 @@ struct CustomCard: View {
    }
 
 #Preview {
-    CustomCard(model: CardInfoModel(title: "Pé de Meia", subTitle: "Educação", image: Image(.imageCard1)))
+    CustomCard(model: CardInfoModel(title: "Pé de Meia", subTitle: "Educação", image: Image(.pedemeia)))
 }
