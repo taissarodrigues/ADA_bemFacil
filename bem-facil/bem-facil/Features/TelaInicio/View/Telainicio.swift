@@ -10,71 +10,46 @@ import SwiftUI
 struct Telainicio: View {
     
     @State private var searchText: String = ""
+    
+    let adaptiveColumns = Array(repeating: GridItem(.fixed(170)), count: 2)
+    
     var body: some View {
-        
         NavigationView {
-            
-            VStack(alignment: .center) {
-//                Image("logo")
-//                    .resizable()
-//                    .aspectRatio(contentMode: .fill)
-//                    .frame(width: 50,height: 50)
-                
-                SearchBar(searchText: searchText)
-                
-                Text ("Conheça as novidades")
-                
-                ScrollView(.horizontal) {
-                    HStack(spacing:18) {
-                        ForEach(0..<3) { _ in
-                            Text("")
-                                .foregroundStyle(.white)
-                                .font(.largeTitle)
-                                .frame(width: 343, height: 180)
-                                .background(.black)
-                                .cornerRadius(8.0)
-                        }
-                    }
-                    
-                }
-                .scrollIndicators(.hidden)
-                
-                ScrollView {
-                    HStack {
-                        VStack(spacing:20) {
-                            ForEach(0..<5) { _ in
-                                Text("")
-                                    .foregroundStyle(.white)
-                                    .font(.largeTitle)
-                                    .frame(width: 150, height: 150)
-                                    .background(.red)
-                                    .cornerRadius(5.0)
-                                
-                            }
-                        }
-                        VStack(spacing:20) {
-                            ForEach(0..<5) { _ in
-                                Text("")
-                                    .foregroundStyle(.white)
-                                    .font(.largeTitle)
-                                    .frame(width: 150, height: 150)
-                                
-                                    .background(.red)
-                                    .cornerRadius(5.0)
-                                
-                            }
-                        }
-                        
-                    }
-                    .padding(.bottom,200 )
-                    
-                }
-                
-            }
-        }
         
-    }
-}
+        
+        VStack {
+            SearchBar(searchText: searchText)
+            
+            ScrollView(.horizontal) {
+                HStack(spacing:18) {
+                    ForEach(0..<3) { _ in
+                        Text("")
+                            .foregroundStyle(.white)
+                            .font(.largeTitle)
+                            .frame(width: 343, height: 180)
+                            .background(.black)
+                            .cornerRadius(8.0)
+                    }
+                }
+            }
+            .scrollIndicators(.hidden)
+            
+           
+                            ScrollView {
+                                LazyVGrid(columns: adaptiveColumns, spacing: 10) {
+                                    ForEach(CardInfoModel.date) { item in
+                                        NavigationLink(destination: TelaInfo()) {
+                                            CustomCard(model: item)
+                                        }
+                                    }
+                                }
+                                .navigationTitle(Text(""))
+                            }
+                        }
+                    }
+                }
+            }
+
 #Preview {
     Telainicio()
 }
