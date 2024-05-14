@@ -17,7 +17,7 @@
 		8C5929282BEA993D0037C38D /* ChatBot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5929272BEA993D0037C38D /* ChatBot.swift */; };
 		8C9593092BF255A600D187BA /* TelaInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9593082BF255A600D187BA /* TelaInfo.swift */; };
 		CE42FEBD2BE901BF002C0792 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE42FEBC2BE901BF002C0792 /* SearchBar.swift */; };
-		CEAFED082BD94D9C00621FF3 /* bem_facilApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAFED072BD94D9C00621FF3 /* bem_facilApp.swift */; };
+		CEAFED082BD94D9C00621FF3 /* MaisBenApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAFED072BD94D9C00621FF3 /* MaisBenApp.swift */; };
 		CEAFED0A2BD94D9C00621FF3 /* Telainicio.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAFED092BD94D9C00621FF3 /* Telainicio.swift */; };
 		CEAFED0C2BD94D9D00621FF3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEAFED0B2BD94D9D00621FF3 /* Assets.xcassets */; };
 		CEAFED0F2BD94D9D00621FF3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEAFED0E2BD94D9D00621FF3 /* Preview Assets.xcassets */; };
@@ -40,7 +40,7 @@
 		CE42FEBC2BE901BF002C0792 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		CE8949DE2BDFCBB000D6F5DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		CEAFED042BD94D9C00621FF3 /* bem-facil.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "bem-facil.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		CEAFED072BD94D9C00621FF3 /* bem_facilApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bem_facilApp.swift; sourceTree = "<group>"; };
+		CEAFED072BD94D9C00621FF3 /* MaisBenApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaisBenApp.swift; sourceTree = "<group>"; };
 		CEAFED092BD94D9C00621FF3 /* Telainicio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Telainicio.swift; sourceTree = "<group>"; };
 		CEAFED0B2BD94D9D00621FF3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CEAFED0E2BD94D9D00621FF3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -72,7 +72,7 @@
 		4A4844922BDFB6730075B6AF /* App */ = {
 			isa = PBXGroup;
 			children = (
-				CEAFED072BD94D9C00621FF3 /* bem_facilApp.swift */,
+				CEAFED072BD94D9C00621FF3 /* MaisBenApp.swift */,
 				E7F90B8E2BEA795800CC7A4C /* MainView.swift */,
 			);
 			path = App;
@@ -352,7 +352,7 @@
 				CEAFED0A2BD94D9C00621FF3 /* Telainicio.swift in Sources */,
 				8C5929282BEA993D0037C38D /* ChatBot.swift in Sources */,
 				8C0AC5CF2BEBAA59005466CD /* TokenColor.swift in Sources */,
-				CEAFED082BD94D9C00621FF3 /* bem_facilApp.swift in Sources */,
+				CEAFED082BD94D9C00621FF3 /* MaisBenApp.swift in Sources */,
 				4A4844982BDFB6C50075B6AF /* Models.swift in Sources */,
 				8C53CD042BED059B00BCBDA2 /* CustomCard.swift in Sources */,
 				8C9593092BF255A600D187BA /* TelaInfo.swift in Sources */,
