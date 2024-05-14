@@ -7,12 +7,14 @@
 
 import SwiftUI
 
+//Aqui é so o componente, não os scr
 struct CardInicial: View {
     var model: CardInfoModel
     var body: some View {
         
         ScrollView(.horizontal) {
-            VStack {
+            HStack {
+                
                 ForEach(0 ..< InitialCardInfo.mockInfos.count) { card in
                     ZStack {
                         Text(InitialCardInfo.mockInfos[card].title)
@@ -27,13 +29,14 @@ struct CardInicial: View {
                                     Text(InitialCardInfo.mockInfos[card].info[info])
                                 }
                             }
-                            .padding(.leading, 110)
+                            .padding(.leading, 50)
                             
                             Spacer()
                             Image(.pedemeia)
+                                .resizable()
+                                .frame(width: 100,height: 100)
                                 .padding(.bottom)
                                 .padding(.trailing, 40)
-                                .frame(width: 100,height: 100)
                         }
                     }
                     .padding(.horizontal, 10)
