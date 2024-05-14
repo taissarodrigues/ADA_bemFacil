@@ -34,7 +34,7 @@ struct CustomCard: View {
                        .shadow(radius: 5)
                        .padding()
 
-                   Text(model.caregory)
+                   Text(model.category)
                        .padding(5)
                        .font(.system(size: 12))
                        .foregroundColor(Color.benUi(.azul))
@@ -53,5 +53,5 @@ struct CustomCard: View {
    }
 
 #Preview {
-    CustomCard(model: ProgramsModel(title: "Pé de Meia", caregory: "Educação", image: "pedemeia"))
+    CustomCard(model: ProgramsModel(title: "Pé de Meia", category: "Educação", image: "pedemeia"))
 }

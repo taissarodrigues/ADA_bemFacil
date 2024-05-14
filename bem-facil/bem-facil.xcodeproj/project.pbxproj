@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4A4844982BDFB6C50075B6AF /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4844972BDFB6C50075B6AF /* Models.swift */; };
-		4A893CE92BEE4DC10030430B /* CardInfosModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A893CE82BEE4DC10030430B /* CardInfosModel.swift */; };
+		4A893CE92BEE4DC10030430B /* ProgramsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A893CE82BEE4DC10030430B /* ProgramsModel.swift */; };
 		8C0AC5CA2BEB9F18005466CD /* TelaChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0AC5C92BEB9F18005466CD /* TelaChatViewModel.swift */; };
 		8C0AC5CF2BEBAA59005466CD /* TokenColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0AC5CE2BEBAA59005466CD /* TokenColor.swift */; };
 		8C0AC5D12BEBAAE8005466CD /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0AC5D02BEBAAE8005466CD /* Question.swift */; };
@@ -24,12 +24,12 @@
 		E71851502BF39A9300621E46 /* TelaMapa.swift in Sources */ = {isa = PBXBuildFile; fileRef = E718514F2BF39A9300621E46 /* TelaMapa.swift */; };
 		E71851532BF3A47A00621E46 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71851522BF3A47A00621E46 /* SwiftUIView.swift */; };
 		E780E5FD2BF391AC003EB45E /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = E780E5FC2BF391AC003EB45E /* .swiftlint.yml */; };
-		E7F90B8F2BEA795800CC7A4C /* TabViewContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F90B8E2BEA795800CC7A4C /* TabViewContent.swift */; };
+		E7F90B8F2BEA795800CC7A4C /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F90B8E2BEA795800CC7A4C /* MainView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4A4844972BDFB6C50075B6AF /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
-		4A893CE82BEE4DC10030430B /* CardInfosModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardInfosModel.swift; sourceTree = "<group>"; };
+		4A893CE82BEE4DC10030430B /* ProgramsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramsModel.swift; sourceTree = "<group>"; };
 		8C0AC5C92BEB9F18005466CD /* TelaChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelaChatViewModel.swift; sourceTree = "<group>"; };
 		8C0AC5CE2BEBAA59005466CD /* TokenColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenColor.swift; sourceTree = "<group>"; };
 		8C0AC5D02BEBAAE8005466CD /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
@@ -47,7 +47,7 @@
 		E718514F2BF39A9300621E46 /* TelaMapa.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelaMapa.swift; sourceTree = "<group>"; };
 		E71851522BF3A47A00621E46 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
 		E780E5FC2BF391AC003EB45E /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
-		E7F90B8E2BEA795800CC7A4C /* TabViewContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewContent.swift; sourceTree = "<group>"; };
+		E7F90B8E2BEA795800CC7A4C /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,7 +73,7 @@
 			isa = PBXGroup;
 			children = (
 				CEAFED072BD94D9C00621FF3 /* bem_facilApp.swift */,
-				E7F90B8E2BEA795800CC7A4C /* TabViewContent.swift */,
+				E7F90B8E2BEA795800CC7A4C /* MainView.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -107,7 +107,7 @@
 		4A893CE72BEE4DB20030430B /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				4A893CE82BEE4DC10030430B /* CardInfosModel.swift */,
+				4A893CE82BEE4DC10030430B /* ProgramsModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -357,8 +357,8 @@
 				8C53CD042BED059B00BCBDA2 /* CustomCard.swift in Sources */,
 				8C9593092BF255A600D187BA /* TelaInfo.swift in Sources */,
 				E71851502BF39A9300621E46 /* TelaMapa.swift in Sources */,
-				E7F90B8F2BEA795800CC7A4C /* TabViewContent.swift in Sources */,
-				4A893CE92BEE4DC10030430B /* CardInfosModel.swift in Sources */,
+				E7F90B8F2BEA795800CC7A4C /* MainView.swift in Sources */,
+				4A893CE92BEE4DC10030430B /* ProgramsModel.swift in Sources */,
 				8C53CD062BED0A8200BCBDA2 /* File.swift in Sources */,
 				8C0AC5D12BEBAAE8005466CD /* Question.swift in Sources */,
 				CE42FEBD2BE901BF002C0792 /* SearchBar.swift in Sources */,

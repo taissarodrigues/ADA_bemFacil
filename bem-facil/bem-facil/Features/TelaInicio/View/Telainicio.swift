@@ -18,7 +18,7 @@ struct Telainicio: View {
         if selectedCategory == "Todos" {
             return ProgramsModel.all
         } else {
-            return ProgramsModel.all.filter { $0.caregory == selectedCategory }
+            return ProgramsModel.all.filter { $0.category == selectedCategory }
         }
     }
     

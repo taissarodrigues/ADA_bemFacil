@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct TabViewContent: View {
+struct MainView: View {
     @ObservedObject var chatBotViewModel = ChatBotViewModel()
     
     var body: some View {
@@ -31,5 +31,5 @@ struct TabViewContent: View {
 }
 
 #Preview {
-    TabViewContent()
+    MainView()
 }
