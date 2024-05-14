@@ -18,6 +18,7 @@
 		8C53CD042BED059B00BCBDA2 /* CustomCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C53CD032BED059B00BCBDA2 /* CustomCard.swift */; };
 		8C53CD062BED0A8200BCBDA2 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C53CD052BED0A8200BCBDA2 /* File.swift */; };
 		8C5929282BEA993D0037C38D /* ChatBot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5929272BEA993D0037C38D /* ChatBot.swift */; };
+		8C9593092BF255A600D187BA /* TelaInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9593082BF255A600D187BA /* TelaInfo.swift */; };
 		CE42FEBD2BE901BF002C0792 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE42FEBC2BE901BF002C0792 /* SearchBar.swift */; };
 		CEAFED082BD94D9C00621FF3 /* bem_facilApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAFED072BD94D9C00621FF3 /* bem_facilApp.swift */; };
 		CEAFED0A2BD94D9C00621FF3 /* Telainicio.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAFED092BD94D9C00621FF3 /* Telainicio.swift */; };
@@ -38,6 +39,7 @@
 		8C53CD032BED059B00BCBDA2 /* CustomCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCard.swift; sourceTree = "<group>"; };
 		8C53CD052BED0A8200BCBDA2 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		8C5929272BEA993D0037C38D /* ChatBot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBot.swift; sourceTree = "<group>"; };
+		8C9593082BF255A600D187BA /* TelaInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelaInfo.swift; sourceTree = "<group>"; };
 		CE42FEBC2BE901BF002C0792 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		CE8949DE2BDFCBB000D6F5DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		CEAFED042BD94D9C00621FF3 /* bem-facil.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "bem-facil.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -186,6 +188,7 @@
 				8C53CD032BED059B00BCBDA2 /* CustomCard.swift */,
 				CE42FEBC2BE901BF002C0792 /* SearchBar.swift */,
 				27E7DC152BEA688A00B8F52B /* CardInicial.swift */,
+				8C9593082BF255A600D187BA /* TelaInfo.swift */,
 			);
 			path = Componentes;
 			sourceTree = "<group>";
@@ -328,6 +331,7 @@
 				CEAFED082BD94D9C00621FF3 /* bem_facilApp.swift in Sources */,
 				4A4844982BDFB6C50075B6AF /* Models.swift in Sources */,
 				8C53CD042BED059B00BCBDA2 /* CustomCard.swift in Sources */,
+				8C9593092BF255A600D187BA /* TelaInfo.swift in Sources */,
 				4A48449B2BDFB6E40075B6AF /* Features.swift in Sources */,
 				E7F90B8F2BEA795800CC7A4C /* TabViewContent.swift in Sources */,
 				4A893CE92BEE4DC10030430B /* CardInfosModel.swift in Sources */,
