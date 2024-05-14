@@ -1,21 +1,35 @@
 import SwiftUI
 
-
 struct Telainicio: View {
     @State private var searchText: String = ""
     @State private var isShowingFilter: Bool = false // Variável para mostrar/ocultar o Picker
     @State private var selectedCategory: String = "Todos" // Inicia com "Todos"
-    @State private var selection: CardInfoModel?
     
     let adaptiveColumns = Array(repeating: GridItem(.fixed(170)), count: 2)
     
-    var filteredData: [CardInfoModel] {
+    @State private var selection: Program?
+    var filteredData: [Program] {
         if selectedCategory == "Todos" {
-            return CardInfoModel.date
+            return ProgramsData.programs
         } else {
-            return CardInfoModel.date.filter { $0.subTitle == selectedCategory }
+            return ProgramsData.programs.filter { $0.category == selectedCategory }
         }
     }
+    
+//    @State private var selection: CardInfoModel?
+//    var cards: [CardInfoModel] {
+//        ProgramsData.programs.map { program in
+//            CardInfoModel(title: program.name, subTitle: program.category, image: program.image)
+//        }
+//    }
+//    
+//    var filteredData: [CardInfoModel] {
+//        if selectedCategory == "Todos" {
+//            return CardInfoModel.date
+//        } else {
+//            return CardInfoModel.date.filter { $0.subTitle == selectedCategory }
+//        }
+//    }
     
     var body: some View {
         NavigationStack {
@@ -47,14 +61,15 @@ struct Telainicio: View {
                     }
                     .buttonStyle(.plain)
                     .navigationDestination(item: $selection) { selectedItem in
-                        if let selectedItem = selectedItem {
-                            if let info = ProgramInfos.mockProgrmasInfos[selectedItem.title] {
-                                TelaInfo(title: selectedItem.title, info: info)
-                            }
-                        }
+                        TelaInfo(
+                            title: selectedItem.name,
+                            image: Image(selectedItem.image),
+                            requirements: selectedItem.requirements,
+                            documents: selectedItem.documents,
+                            links: selectedItem.urls
+                        )
                     }
-
-                }
+                    
                 } header: {
                     HStack {
                         Text("Programas")
@@ -64,15 +79,16 @@ struct Telainicio: View {
                                 Text($0)
                             }
                         }
-                        .pickerStyle(MenuPickerStyle())
                     }
-                    .headerProminence(.increased)
+                    .pickerStyle(MenuPickerStyle())
                 }
+                .headerProminence(.increased)
             }
-            .listStyle(.plain)
-            .searchable(text: $searchText, placement: .navigationBarDrawer(displayMode: .always))
         }
+        .listStyle(.plain)
+        .searchable(text: $searchText, placement: .navigationBarDrawer(displayMode: .always))
     }
+}
 
 struct Telainicio_Previews: PreviewProvider {
     static var previews: some View {

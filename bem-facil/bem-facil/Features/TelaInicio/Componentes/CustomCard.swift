@@ -9,7 +9,7 @@ import SwiftUI
 
 struct CustomCard: View {
     
-    var model: CardInfoModel
+    var model: Program
     
     var body: some View {
            ZStack {
@@ -28,13 +28,13 @@ struct CustomCard: View {
                .mask(RoundedRectangle(cornerRadius: 20))
                
                VStack(alignment: .leading, spacing: -25) {
-                   Text(model.title)
+                   Text(model.name)
                        .font(.system(size: 17, weight: .bold))
                        .foregroundStyle(.white)
                        .shadow(radius: 5)
                        .padding()
 
-                   Text(model.subTitle)
+                   Text(model.category)
                        .padding(5)
                        .font(.system(size: 12))
                        .foregroundColor(Color.benUi(.azul))
@@ -53,5 +53,5 @@ struct CustomCard: View {
    }
 
 #Preview {
-    CustomCard(model: CardInfoModel(title: "Pé de Meia", subTitle: "Educação", image: "pedemeia"))
+    CustomCard(model: ProgramsData.programs[0])
 }
