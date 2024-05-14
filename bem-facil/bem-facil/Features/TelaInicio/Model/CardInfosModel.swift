@@ -7,20 +7,20 @@
 
 import SwiftUI
 
-struct CardInfoModel: Hashable, Identifiable {
+struct ProgramsModel: Hashable, Identifiable {
     var id = UUID()
     var title: String
-    var subTitle: String
+    var caregory: String
     var image: String
     
-    static let date: [CardInfoModel] = [
-        CardInfoModel(title: "Benefício Prestação Continuada", subTitle: "Assistência Social", image: "bpc"),
-        CardInfoModel(title: "Bolsa Familia", subTitle: "Assistência Social", image: "bolsafamilia"),
-        CardInfoModel(title: "Minha casa, Minha vida", subTitle: "Assistência Social", image: "mcmv"),
-        CardInfoModel(title: "Vale Gás", subTitle: "Assistência Social", image: "valegas"),
-        CardInfoModel(title: "Bolsa Atleta", subTitle: "Cultura", image: "bolsaAtleta"),
-        CardInfoModel(title: "Pé de meia", subTitle: "Educação", image: "pedemeia"),
-        CardInfoModel(title: "Desenrola Fies", subTitle: "Educação", image: "desenrolaFies"),
-        CardInfoModel(title: "Farmácia Popular", subTitle: "Saúde", image: "farmacia")
+    static let all: [ProgramsModel] = [
+        ProgramsModel(title: "Benefício Prestação Continuada", caregory: "Assistência Social", image: "bpc"),
+        ProgramsModel(title: "Bolsa Familia", caregory: "Assistência Social", image: "bolsafamilia"),
+        ProgramsModel(title: "Minha casa, Minha vida", caregory: "Assistência Social", image: "mcmv"),
+        ProgramsModel(title: "Vale Gás", caregory: "Assistência Social", image: "valegas"),
+        ProgramsModel(title: "Bolsa Atleta", caregory: "Cultura", image: "bolsaAtleta"),
+        ProgramsModel(title: "Pé de meia", caregory: "Educação", image: "pedemeia"),
+        ProgramsModel(title: "Desenrola Fies", caregory: "Educação", image: "desenrolaFies"),
+        ProgramsModel(title: "Farmácia Popular", caregory: "Saúde", image: "farmacia")
     ]
 }

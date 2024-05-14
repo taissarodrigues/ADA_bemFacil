@@ -22,12 +22,11 @@ struct TabViewContent: View {
                 .tabItem {
                     Label("Dúvidas", systemImage: "questionmark")
                 }
-            Text("Pontos")
+            TelaMapa()
                 .tabItem {
                     Label("Pontos", systemImage: "map.fill")
                 }
         }
-//        .accentColor()
     }
 }
 

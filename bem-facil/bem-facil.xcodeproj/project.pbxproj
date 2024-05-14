@@ -7,9 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4A4844952BDFB69F0075B6AF /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4844942BDFB69F0075B6AF /* Util.swift */; };
 		4A4844982BDFB6C50075B6AF /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4844972BDFB6C50075B6AF /* Models.swift */; };
-		4A48449B2BDFB6E40075B6AF /* Features.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A48449A2BDFB6E40075B6AF /* Features.swift */; };
 		4A893CE92BEE4DC10030430B /* CardInfosModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A893CE82BEE4DC10030430B /* CardInfosModel.swift */; };
 		8C0AC5CA2BEB9F18005466CD /* TelaChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0AC5C92BEB9F18005466CD /* TelaChatViewModel.swift */; };
 		8C0AC5CF2BEBAA59005466CD /* TokenColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0AC5CE2BEBAA59005466CD /* TokenColor.swift */; };
@@ -23,13 +21,14 @@
 		CEAFED0A2BD94D9C00621FF3 /* Telainicio.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAFED092BD94D9C00621FF3 /* Telainicio.swift */; };
 		CEAFED0C2BD94D9D00621FF3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEAFED0B2BD94D9D00621FF3 /* Assets.xcassets */; };
 		CEAFED0F2BD94D9D00621FF3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEAFED0E2BD94D9D00621FF3 /* Preview Assets.xcassets */; };
+		E71851502BF39A9300621E46 /* TelaMapa.swift in Sources */ = {isa = PBXBuildFile; fileRef = E718514F2BF39A9300621E46 /* TelaMapa.swift */; };
+		E71851532BF3A47A00621E46 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71851522BF3A47A00621E46 /* SwiftUIView.swift */; };
+		E780E5FD2BF391AC003EB45E /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = E780E5FC2BF391AC003EB45E /* .swiftlint.yml */; };
 		E7F90B8F2BEA795800CC7A4C /* TabViewContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F90B8E2BEA795800CC7A4C /* TabViewContent.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4A4844942BDFB69F0075B6AF /* Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
 		4A4844972BDFB6C50075B6AF /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
-		4A48449A2BDFB6E40075B6AF /* Features.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Features.swift; sourceTree = "<group>"; };
 		4A893CE82BEE4DC10030430B /* CardInfosModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardInfosModel.swift; sourceTree = "<group>"; };
 		8C0AC5C92BEB9F18005466CD /* TelaChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelaChatViewModel.swift; sourceTree = "<group>"; };
 		8C0AC5CE2BEBAA59005466CD /* TokenColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenColor.swift; sourceTree = "<group>"; };
@@ -45,6 +44,9 @@
 		CEAFED092BD94D9C00621FF3 /* Telainicio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Telainicio.swift; sourceTree = "<group>"; };
 		CEAFED0B2BD94D9D00621FF3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CEAFED0E2BD94D9D00621FF3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E718514F2BF39A9300621E46 /* TelaMapa.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelaMapa.swift; sourceTree = "<group>"; };
+		E71851522BF3A47A00621E46 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
+		E780E5FC2BF391AC003EB45E /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		E7F90B8E2BEA795800CC7A4C /* TabViewContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewContent.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -80,7 +82,6 @@
 			isa = PBXGroup;
 			children = (
 				8C0AC5CD2BEBAA3B005466CD /* Tokens */,
-				4A4844942BDFB69F0075B6AF /* Util.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -96,9 +97,9 @@
 		4A4844992BDFB6D00075B6AF /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				E718514D2BF399DA00621E46 /* TelaMapa */,
 				8C59292D2BEABF2D0037C38D /* TelaChat */,
 				8CAE5B942BEA52C4005B45E4 /* TelaInicio */,
-				4A48449A2BDFB6E40075B6AF /* Features.swift */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -216,6 +217,7 @@
 				4A4844962BDFB6B20075B6AF /* Models */,
 				4A4844992BDFB6D00075B6AF /* Features */,
 				CEAFED0D2BD94D9D00621FF3 /* Preview Content */,
+				E780E5FC2BF391AC003EB45E /* .swiftlint.yml */,
 			);
 			path = "bem-facil";
 			sourceTree = "<group>";
@@ -226,6 +228,31 @@
 				CEAFED0E2BD94D9D00621FF3 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		E718514D2BF399DA00621E46 /* TelaMapa */ = {
+			isa = PBXGroup;
+			children = (
+				E71851512BF3A27800621E46 /* Components */,
+				E718514E2BF399ED00621E46 /* View */,
+			);
+			path = TelaMapa;
+			sourceTree = "<group>";
+		};
+		E718514E2BF399ED00621E46 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E718514F2BF39A9300621E46 /* TelaMapa.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E71851512BF3A27800621E46 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				E71851522BF3A47A00621E46 /* SwiftUIView.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -287,6 +314,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E780E5FD2BF391AC003EB45E /* .swiftlint.yml in Resources */,
 				CEAFED0F2BD94D9D00621FF3 /* Preview Assets.xcassets in Resources */,
 				CEAFED0C2BD94D9D00621FF3 /* Assets.xcassets in Resources */,
 			);
@@ -323,18 +351,18 @@
 				8C0AC5CA2BEB9F18005466CD /* TelaChatViewModel.swift in Sources */,
 				CEAFED0A2BD94D9C00621FF3 /* Telainicio.swift in Sources */,
 				8C5929282BEA993D0037C38D /* ChatBot.swift in Sources */,
-				4A4844952BDFB69F0075B6AF /* Util.swift in Sources */,
 				8C0AC5CF2BEBAA59005466CD /* TokenColor.swift in Sources */,
 				CEAFED082BD94D9C00621FF3 /* bem_facilApp.swift in Sources */,
 				4A4844982BDFB6C50075B6AF /* Models.swift in Sources */,
 				8C53CD042BED059B00BCBDA2 /* CustomCard.swift in Sources */,
 				8C9593092BF255A600D187BA /* TelaInfo.swift in Sources */,
-				4A48449B2BDFB6E40075B6AF /* Features.swift in Sources */,
+				E71851502BF39A9300621E46 /* TelaMapa.swift in Sources */,
 				E7F90B8F2BEA795800CC7A4C /* TabViewContent.swift in Sources */,
 				4A893CE92BEE4DC10030430B /* CardInfosModel.swift in Sources */,
 				8C53CD062BED0A8200BCBDA2 /* File.swift in Sources */,
 				8C0AC5D12BEBAAE8005466CD /* Question.swift in Sources */,
 				CE42FEBD2BE901BF002C0792 /* SearchBar.swift in Sources */,
+				E71851532BF3A47A00621E46 /* SwiftUIView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -468,6 +496,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"bem-facil/Preview Content\"";
+				DEVELOPMENT_TEAM = 762S62F9X8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "bem-facil/Info.plist";
@@ -496,6 +525,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"bem-facil/Preview Content\"";
+				DEVELOPMENT_TEAM = 762S62F9X8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "bem-facil/Info.plist";

@@ -20,7 +20,6 @@ enum ColorCase {
     case azul3
     case azulClaro
     
-    
 }
 
 extension Color {
