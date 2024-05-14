@@ -8,10 +8,10 @@
 import SwiftUI
 
 @main
-struct BemFacilApp: App {
+struct MaisBEN: App {
     var body: some Scene {
         WindowGroup {
-            TabViewContent()
+            MainView()
         }
     }
 }

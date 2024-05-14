@@ -5,22 +5,26 @@ struct Telainicio: View {
     @State private var isShowingFilter: Bool = false // Variável para mostrar/ocultar o Picker
     @State private var selectedCategory: String = "Todos" // Inicia com "Todos"
     
-    @State private var selection: CardInfoModel?
+    @State private var selection: ProgramsModel?
     
     let adaptiveColumns = Array(repeating: GridItem(.fixed(170)), count: 2)
     
-    var filteredData: [CardInfoModel] {
+    var searchedData: [ProgramsModel] {
+        guard !searchText.isEmpty else {return ProgramsModel.all }
+        return ProgramsModel.all.filter { $0.title.localizedCaseInsensitiveContains(searchText) }
+    }
+    
+    var filteredData: [ProgramsModel] {
         if selectedCategory == "Todos" {
-            return CardInfoModel.date
+            return ProgramsModel.all
         } else {
-            return CardInfoModel.date.filter { $0.subTitle == selectedCategory }
+            return ProgramsModel.all.filter { $0.category == selectedCategory }
         }
     }
     
     var body: some View {
         NavigationStack {
             List {
-                
                 Section {
                     TabView {
                         ForEach(0..<3) { _ in
@@ -87,8 +91,17 @@ struct Telainicio: View {
                 }
             }
             .listStyle(.plain)
-            .searchable(text: $searchText, placement: .navigationBarDrawer(displayMode: .always))
-            
+            .searchable(
+                text: $searchText,
+                placement: .navigationBarDrawer(displayMode: .automatic)
+            )
+            .searchSuggestions {
+                ForEach(searchedData) { data in
+                    NavigationLink(data.title) {
+                
+                    }
+                }
+            }
             
 //            VStack(alignment: .leading) {
 //                
