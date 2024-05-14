@@ -58,7 +58,7 @@ struct CardInicial: View {
 
 
 #Preview {
-    CardInicial(model: CardInfoModel(title: "", subTitle: "" , image: Image(.bolsaAtleta)))
+    CardInicial(model: CardInfoModel(title: "", subTitle: "" , image: "star.fill"))
         .background(content: {
             Rectangle()
                 .frame(width: 500, height: 500)
