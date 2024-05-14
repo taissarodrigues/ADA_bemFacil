@@ -4,18 +4,24 @@
 //
 //  Created by Taissa Vitoria Rodrigues de Paula on 13/05/24.
 //
-
 import SwiftUI
 
 struct TelaInfo: View {
     
     let title: String
+    let info: [String]
     
     var body: some View {
-        Text(title)
+        VStack {
+            Text(title)
+                .font(.title)
+            ForEach(info, id: \.self) { item in
+                Text(item)
+            }
+        }
     }
 }
 
 #Preview {
-    TelaInfo(title: "Farmacia")
+    TelaInfo(title: "asds", info:["ff"])
 }

@@ -1,10 +1,10 @@
 import SwiftUI
 
+
 struct Telainicio: View {
     @State private var searchText: String = ""
     @State private var isShowingFilter: Bool = false // Variável para mostrar/ocultar o Picker
     @State private var selectedCategory: String = "Todos" // Inicia com "Todos"
-    
     @State private var selection: CardInfoModel?
     
     let adaptiveColumns = Array(repeating: GridItem(.fixed(170)), count: 2)
@@ -20,7 +20,6 @@ struct Telainicio: View {
     var body: some View {
         NavigationStack {
             List {
-                
                 Section {
                     TabView {
                         ForEach(0..<3) { _ in
@@ -35,31 +34,10 @@ struct Telainicio: View {
                     .tabViewStyle(.page(indexDisplayMode: .always))
                     .frame(height: 200)
                 }
-                
-//                Section {
-//                    ScrollView(.horizontal) {
-//                        HStack(spacing:18) {
-//                            ForEach(0..<3) { _ in
-//                                Text("")
-//                                    .foregroundStyle(.white)
-//                                    .font(.largeTitle)
-//                                    .frame(height: 180)
-//                                    .containerRelativeFrame(.horizontal, count: 10, span: 8, spacing: 0)
-//                                    .background(.black)
-//                                    .cornerRadius(8.0)
-//                            }
-//                        }
-//                        .scrollTargetLayout()
-//                    }
-//                    .scrollIndicators(.hidden)
-//                    .scrollTargetBehavior(.viewAligned)
-//                    
-//                }
-                
                 Section {
                     LazyVGrid(columns: adaptiveColumns, spacing: 10) {
                         ForEach(filteredData) { item in
-                            Button { 
+                            Button {
                                 selection = item
                             } label: {
                                 CustomCard(model: item)
@@ -68,9 +46,15 @@ struct Telainicio: View {
                         }
                     }
                     .buttonStyle(.plain)
-                    .navigationDestination(item: $selection) { selection in
-                        TelaInfo(title: selection.title)
+                    .navigationDestination(item: $selection) { selectedItem in
+                        if let selectedItem = selectedItem {
+                            if let info = ProgramInfos.mockProgrmasInfos[selectedItem.title] {
+                                TelaInfo(title: selectedItem.title, info: info)
+                            }
+                        }
                     }
+
+                }
                 } header: {
                     HStack {
                         Text("Programas")
@@ -83,58 +67,12 @@ struct Telainicio: View {
                         .pickerStyle(MenuPickerStyle())
                     }
                     .headerProminence(.increased)
-
                 }
             }
             .listStyle(.plain)
             .searchable(text: $searchText, placement: .navigationBarDrawer(displayMode: .always))
-            
-            
-//            VStack(alignment: .leading) {
-//                
-//            
-//                SearchBar(searchText: searchText)
-//                
-//                
-//                
-//                HStack() {
-//                    Text("Programas")
-//                        .font(.title)
-//                        .fontWeight(.bold)
-//                        .multilineTextAlignment(.leading)
-//                    //                        .padding(.leading)
-//                    Spacer()
-//                    Picker("Categoria", selection: $selectedCategory) {
-//                        ForEach(["Todos", "Assistência Social", "Cultura", "Educação", "Saúde"], id: \.self) {
-//                            Text($0)
-//                        }
-//                    }
-//                    .pickerStyle(MenuPickerStyle())
-//                    .padding(.trailing, 10)
-//                    
-//                    
-//                    
-////                    Image(systemName: "line.horizontal.3z.decrease.circle")
-////                        .foregroundColor(.blue)
-////                        .padding(.trailing)
-//                }
-//                .padding(.leading, 30)
-//                
-//                ScrollView {
-//                    LazyVGrid(columns: adaptiveColumns, spacing: 10) {
-//                        ForEach(filteredData) { item in
-//                            NavigationLink(destination: TelaInfo(title: item.title)) {
-//                                CustomCard(model: item)
-//                            }
-//                        }
-//                    }
-//                    .navigationTitle(Text(""))
-//                }
-//            }
-            
         }
     }
-}
 
 struct Telainicio_Previews: PreviewProvider {
     static var previews: some View {
