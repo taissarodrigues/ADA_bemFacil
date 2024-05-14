@@ -28,8 +28,8 @@ struct InitialCardInfo: Identifiable {
     var image: Image
     
     static let mockInfos: [InitialCardInfo] = [
-        InitialCardInfo(title: "Pé de meia", info: ["Educação", "huhshbhbhbhbjjnnjnhbhahy,"], image: Image(.pedemeia)),
-        InitialCardInfo(title: "Bolsa Familia", info: ["Saúde", "jsinjnjnjnjjnjjjjnjnjjnnwhd"], image: Image(.pedemeia)),
-        InitialCardInfo(title: "Bolsa Jovem", info: ["Educação", "ifhyhyyttybbhhbtvhvhuieh"], image: Image(.pedemeia))
+        InitialCardInfo(title: "Pé de meia", info: ["ser estudante de escola publica", "ser estudante de escola publica","ser estudante de escola publica"], image: Image(.pedemeia)),
+        InitialCardInfo(title: "Bolsa Familia", info: ["ser estudante de escola publica", "ser estudante de escola publica","ser estudante de escola publica"], image: Image(.pedemeia)),
+        InitialCardInfo(title: "Bolsa Jovem", info: ["ser estudante de escola publica", "ser estudante de escola publica", "ser estudante de escola publica"], image: Image(.pedemeia))
     ]
 }

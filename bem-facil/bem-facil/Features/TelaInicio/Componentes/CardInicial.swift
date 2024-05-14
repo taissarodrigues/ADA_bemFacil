@@ -8,15 +8,16 @@
 import SwiftUI
 
 struct CardInicial: View {
+    var model: CardInfoModel
     var body: some View {
         
         ScrollView(.horizontal) {
-            HStack {
+            VStack {
                 ForEach(0 ..< InitialCardInfo.mockInfos.count) { card in
                     ZStack {
                         Text(InitialCardInfo.mockInfos[card].title)
                             .font(.system(size:28, weight:.bold ))
-                            .padding(.trailing, 200)
+                            .padding(.trailing, 190)
                             .padding(.bottom, 100)
                         
                         Spacer()
@@ -24,14 +25,15 @@ struct CardInicial: View {
                             VStack {
                                 ForEach(0 ..< InitialCardInfo.mockInfos[card].info.count) { info in
                                     Text(InitialCardInfo.mockInfos[card].info[info])
-                                        .
-                                        .frame(width: 100)
-                                
                                 }
                             }
+                            .padding(.leading, 110)
+                            
                             Spacer()
                             Image(.pedemeia)
                                 .padding(.bottom)
+                                .padding(.trailing, 40)
+                                .frame(width: 100,height: 100)
                         }
                     }
                     .padding(.horizontal, 10)
@@ -56,7 +58,7 @@ struct CardInicial: View {
 
 
 #Preview {
-    CardInicial()
+    CardInicial(model: CardInfoModel(title: "", subTitle: "" , image: Image(.bolsaAtleta)))
         .background(content: {
             Rectangle()
                 .frame(width: 500, height: 500)
