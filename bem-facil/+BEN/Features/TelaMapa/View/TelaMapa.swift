@@ -16,7 +16,7 @@ struct TelaMapa: View {
         
         //        Frame
         
-        VStack (){
+        VStack(){
             
             Text("Pontos de Coleta")
             
