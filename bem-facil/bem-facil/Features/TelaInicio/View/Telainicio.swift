@@ -85,7 +85,7 @@ struct Telainicio: View {
                 }
             }
             .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) { 
+                ToolbarItem(placement: .navigationBarTrailing) {
                     NavigationLink(destination: {
                         ChatBot()
                     }){
@@ -93,6 +93,7 @@ struct Telainicio: View {
                     }
                 }
             }
+            
         }
     }
 }

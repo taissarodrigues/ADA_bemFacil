@@ -8,7 +8,7 @@
 import SwiftUI
 
 @main
-struct MaisBenApp: App {
+struct MaisBEN: App {
     var body: some Scene {
         WindowGroup {
             MainView()

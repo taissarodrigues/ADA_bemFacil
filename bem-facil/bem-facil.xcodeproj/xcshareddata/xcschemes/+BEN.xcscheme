@@ -16,9 +16,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "CEAFED032BD94D9C00621FF3"
-               BuildableName = "+BEN.app"
-               BlueprintName = "+BEN"
-               ReferencedContainer = "container:+BEN.xcodeproj">
+               BuildableName = "bem-facil.app"
+               BlueprintName = "bem-facil"
+               ReferencedContainer = "container:bem-facil.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -45,9 +45,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "CEAFED032BD94D9C00621FF3"
-            BuildableName = "+BEN.app"
-            BlueprintName = "+BEN"
-            ReferencedContainer = "container:+BEN.xcodeproj">
+            BuildableName = "bem-facil.app"
+            BlueprintName = "bem-facil"
+            ReferencedContainer = "container:bem-facil.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -62,9 +62,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "CEAFED032BD94D9C00621FF3"
-            BuildableName = "+BEN.app"
-            BlueprintName = "+BEN"
-            ReferencedContainer = "container:+BEN.xcodeproj">
+            BuildableName = "bem-facil.app"
+            BlueprintName = "bem-facil"
+            ReferencedContainer = "container:bem-facil.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

@@ -87,5 +87,4 @@ struct ChatBot: View {
 }
 #Preview {
     ChatBot()
-        .environmentObject(ChatBotViewModel())
 }

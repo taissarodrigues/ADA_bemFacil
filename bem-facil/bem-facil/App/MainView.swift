@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct MainView: View {
-    @ObservedObject var chatBotViewModel = ChatBotViewModel()
     
     var body: some View {
         
