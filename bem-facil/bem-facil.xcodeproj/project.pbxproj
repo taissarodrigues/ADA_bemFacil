@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		27E7DC162BEA688A00B8F52B /* CardInicial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E7DC152BEA688A00B8F52B /* CardInicial.swift */; };
-		4A4844952BDFB69F0075B6AF /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4844942BDFB69F0075B6AF /* Util.swift */; };
+		4A4196CE2BF5820600435D4C /* OnBoardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4196CD2BF5820600435D4C /* OnBoardModel.swift */; };
 		4A4844982BDFB6C50075B6AF /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4844972BDFB6C50075B6AF /* Models.swift */; };
 		4A893CE92BEE4DC10030430B /* ProgramsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A893CE82BEE4DC10030430B /* ProgramsModel.swift */; };
 		8C0AC5CA2BEB9F18005466CD /* TelaChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0AC5C92BEB9F18005466CD /* TelaChatViewModel.swift */; };
@@ -19,8 +19,6 @@
 		8C5929282BEA993D0037C38D /* ChatBot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5929272BEA993D0037C38D /* ChatBot.swift */; };
 		8C9593092BF255A600D187BA /* TelaInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9593082BF255A600D187BA /* TelaInfo.swift */; };
 		8CEDB7C72BF3A688001CF7CD /* ProgramsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEDB7C62BF3A688001CF7CD /* ProgramsData.swift */; };
-		8CF912092BF4F87D00DF9450 /* PageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF912082BF4F87D00DF9450 /* PageModel.swift */; };
-		8CF9120D2BF4FA5100DF9450 /* Onboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF9120C2BF4FA5100DF9450 /* Onboarding.swift */; };
 		8CF912112BF4FE0C00DF9450 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF912102BF4FE0C00DF9450 /* ContentView.swift */; };
 		CE42FEBD2BE901BF002C0792 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE42FEBC2BE901BF002C0792 /* SearchBar.swift */; };
 		CEAFED082BD94D9C00621FF3 /* bem_facilApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAFED072BD94D9C00621FF3 /* bem_facilApp.swift */; };
@@ -36,7 +34,7 @@
 
 /* Begin PBXFileReference section */
 		27E7DC152BEA688A00B8F52B /* CardInicial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardInicial.swift; sourceTree = "<group>"; };
-		4A4844942BDFB69F0075B6AF /* Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
+		4A4196CD2BF5820600435D4C /* OnBoardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardModel.swift; sourceTree = "<group>"; };
 		4A4844972BDFB6C50075B6AF /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		4A893CE82BEE4DC10030430B /* ProgramsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramsModel.swift; sourceTree = "<group>"; };
 		8C0AC5C92BEB9F18005466CD /* TelaChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelaChatViewModel.swift; sourceTree = "<group>"; };
@@ -47,8 +45,6 @@
 		8C5929272BEA993D0037C38D /* ChatBot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBot.swift; sourceTree = "<group>"; };
 		8C9593082BF255A600D187BA /* TelaInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelaInfo.swift; sourceTree = "<group>"; };
 		8CEDB7C62BF3A688001CF7CD /* ProgramsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramsData.swift; sourceTree = "<group>"; };
-		8CF912082BF4F87D00DF9450 /* PageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageModel.swift; sourceTree = "<group>"; };
-		8CF9120C2BF4FA5100DF9450 /* Onboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding.swift; sourceTree = "<group>"; };
 		8CF912102BF4FE0C00DF9450 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		CE42FEBC2BE901BF002C0792 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		CE8949DE2BDFCBB000D6F5DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -75,6 +71,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4A4196CC2BF581A800435D4C /* OnBoarding */ = {
+			isa = PBXGroup;
+			children = (
+				4A4196CD2BF5820600435D4C /* OnBoardModel.swift */,
+			);
+			path = OnBoarding;
+			sourceTree = "<group>";
+		};
 		4A4844912BDFB65E0075B6AF /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -111,6 +115,7 @@
 		4A4844992BDFB6D00075B6AF /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				4A4196CC2BF581A800435D4C /* OnBoarding */,
 				E718514D2BF399DA00621E46 /* TelaMapa */,
 				8C59292D2BEABF2D0037C38D /* TelaChat */,
 				8CAE5B942BEA52C4005B45E4 /* TelaInicio */,
@@ -122,7 +127,6 @@
 			isa = PBXGroup;
 			children = (
 				8CEDB7C62BF3A688001CF7CD /* ProgramsData.swift */,
-				8CF912082BF4F87D00DF9450 /* PageModel.swift */,
 				4A893CE82BEE4DC10030430B /* ProgramsModel.swift */,
 			);
 			path = Model;
@@ -193,7 +197,6 @@
 			isa = PBXGroup;
 			children = (
 				CEAFED092BD94D9C00621FF3 /* Telainicio.swift */,
-				8CF9120C2BF4FA5100DF9450 /* Onboarding.swift */,
 				8CF912102BF4FE0C00DF9450 /* ContentView.swift */,
 			);
 			path = View;
@@ -382,11 +385,10 @@
 				E7F90B8F2BEA795800CC7A4C /* MainView.swift in Sources */,
 				4A893CE92BEE4DC10030430B /* ProgramsModel.swift in Sources */,
 				8C53CD062BED0A8200BCBDA2 /* File.swift in Sources */,
-				8CF912092BF4F87D00DF9450 /* PageModel.swift in Sources */,
-				8CF9120D2BF4FA5100DF9450 /* Onboarding.swift in Sources */,
 				8C0AC5D12BEBAAE8005466CD /* Question.swift in Sources */,
 				CE42FEBD2BE901BF002C0792 /* SearchBar.swift in Sources */,
 				27E7DC162BEA688A00B8F52B /* CardInicial.swift in Sources */,
+				4A4196CE2BF5820600435D4C /* OnBoardModel.swift in Sources */,
 				E7F5093F2BF5462700D48B36 /* LocationDetailsView.swift in Sources */,
 				E71851532BF3A47A00621E46 /* SwiftUIView.swift in Sources */,
 			);
