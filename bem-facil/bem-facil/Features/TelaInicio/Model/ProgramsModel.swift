@@ -24,3 +24,16 @@ struct ProgramsModel: Hashable, Identifiable {
         ProgramsModel(title: "Farmácia Popular", category: "Saúde", image: "farmacia")
     ]
 }
+
+struct InitialCardInfo: Identifiable {
+    var id = UUID()
+    var title: String
+    var info: [String]
+    var image: Image
+    
+    static let mockInfos: [InitialCardInfo] = [
+        InitialCardInfo(title: "Pé de meia", info: ["ser estudante de escola publica", "ser estudante de escola publica","ser estudante de escola publica"], image: Image(.pedemeia)),
+        InitialCardInfo(title: "Bolsa Familia", info: ["ser estudante de escola publica", "ser estudante de escola publica","ser estudante de escola publica"], image: Image(.pedemeia)),
+        InitialCardInfo(title: "Bolsa Jovem", info: ["ser estudante de escola publica", "ser estudante de escola publica", "ser estudante de escola publica"], image: Image(.pedemeia))
+    ]
+}

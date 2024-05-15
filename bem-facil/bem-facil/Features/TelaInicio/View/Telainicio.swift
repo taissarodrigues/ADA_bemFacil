@@ -45,31 +45,32 @@ struct Telainicio: View {
                 Section {
                     LazyVGrid(columns: adaptiveColumns, spacing: 10) {
                         ForEach(filteredData) { item in
-                            Button { 
+                            Button {
                                 selection = item
                             } label: {
                                 CustomCard(model: item)
                                     .compositingGroup()
                             }
                         }
-                        .buttonStyle(.plain)
-                        .navigationDestination(item: $selection) { selection in
-                            TelaInfo(title: selection.title)
-                        }
-                    } header: {
-                        HStack {
-                            Text("Programas")
-                            Spacer()
-                            Picker("Categoria", selection: $selectedCategory) {
-                                ForEach(["Todos", "Assistência Social", "Cultura", "Educação", "Saúde"], id: \.self) {
-                                    Text($0)
-                                }
-                            }
-                            .pickerStyle(MenuPickerStyle())
-                        }
-                        .headerProminence(.increased)
-                        
                     }
+                    .buttonStyle(.plain)
+                    .navigationDestination(item: $selection) { selection in
+                        TelaInfo(title: selection.title)
+                    }
+                }
+            header: {
+                    HStack {
+                        Text("Programas")
+                        Spacer()
+                        Picker("", selection: $selectedCategory) {
+                            ForEach(["Todos", "Assistência Social", "Cultura", "Educação", "Saúde"], id: \.self) {
+                                Text($0)
+                            }
+                        }
+                        .pickerStyle(MenuPickerStyle())
+                    }
+                    .headerProminence(.increased)
+                    
                 }
                 .listStyle(.plain)
                 .searchable(text: $searchText, placement: .navigationBarDrawer(displayMode: .always))
@@ -82,7 +83,7 @@ struct Telainicio: View {
             .searchSuggestions {
                 ForEach(searchedData) { data in
                     NavigationLink(data.title) {
-                
+                        
                     }
                 }
             }
@@ -98,6 +99,7 @@ struct Telainicio: View {
         }
     }
 }
+
 
 struct Telainicio_Previews: PreviewProvider {
     static var previews: some View {
