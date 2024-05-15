@@ -39,9 +39,26 @@ struct Telainicio: View {
                     .tabViewStyle(.page(indexDisplayMode: .always))
                     .frame(height: 200)
                 }
-                .navigationTitle("Programas")
-                .navigationBarTitleDisplayMode(.inline)
                 
+//                Section {
+//                    ScrollView(.horizontal) {
+//                        HStack(spacing:18) {
+//                            ForEach(0..<3) { _ in
+//                                Text("")
+//                                    .foregroundStyle(.white)
+//                                    .font(.largeTitle)
+//                                    .frame(height: 180)
+//                                    .containerRelativeFrame(.horizontal, count: 10, span: 8, spacing: 0)
+//                                    .background(.black)
+//                                    .cornerRadius(8.0)
+//                            }
+//                        }
+//                        .scrollTargetLayout()
+//                    }
+//                    .scrollIndicators(.hidden)
+//                    .scrollTargetBehavior(.viewAligned)
+//                    
+//                }
                 
                 Section {
                     LazyVGrid(columns: adaptiveColumns, spacing: 10) {
@@ -85,15 +102,49 @@ struct Telainicio: View {
                     }
                 }
             }
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) { // Place the button on the right side
-                    NavigationLink(destination: {
-                        ChatBot()
-                    }) {
-                        Image(systemName: "questionmark.bubble")
-                    }
-                }
-            }
+            
+//            VStack(alignment: .leading) {
+//                
+//            
+//                SearchBar(searchText: searchText)
+//                
+//                
+//                
+//                HStack() {
+//                    Text("Programas")
+//                        .font(.title)
+//                        .fontWeight(.bold)
+//                        .multilineTextAlignment(.leading)
+//                    //                        .padding(.leading)
+//                    Spacer()
+//                    Picker("Categoria", selection: $selectedCategory) {
+//                        ForEach(["Todos", "Assistência Social", "Cultura", "Educação", "Saúde"], id: \.self) {
+//                            Text($0)
+//                        }
+//                    }
+//                    .pickerStyle(MenuPickerStyle())
+//                    .padding(.trailing, 10)
+//                    
+//                    
+//                    
+////                    Image(systemName: "line.horizontal.3z.decrease.circle")
+////                        .foregroundColor(.blue)
+////                        .padding(.trailing)
+//                }
+//                .padding(.leading, 30)
+//                
+//                ScrollView {
+//                    LazyVGrid(columns: adaptiveColumns, spacing: 10) {
+//                        ForEach(filteredData) { item in
+//                            NavigationLink(destination: TelaInfo(title: item.title)) {
+//                                CustomCard(model: item)
+//                            }
+//                        }
+//                    }
+//                    .navigationTitle(Text(""))
+//                }
+//            }
+            
         }
     }
 }
