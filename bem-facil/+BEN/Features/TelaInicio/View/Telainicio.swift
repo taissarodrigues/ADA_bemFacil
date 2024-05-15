@@ -42,7 +42,6 @@ struct Telainicio: View {
                 .navigationTitle("Programas")
                 .navigationBarTitleDisplayMode(.inline)
                 
-                
                 Section {
                     LazyVGrid(columns: adaptiveColumns, spacing: 10) {
                         ForEach(filteredData) { item in
@@ -60,7 +59,7 @@ struct Telainicio: View {
                     }
                 } header: {
                     HStack {
-                        Text("Programas")
+                        Text("Lista de Programas")
                         Spacer()
                         Picker("Categoria", selection: $selectedCategory) {
                             ForEach(["Todos", "Assistência Social", "Cultura", "Educação", "Saúde"], id: \.self) {
@@ -76,7 +75,7 @@ struct Telainicio: View {
             .listStyle(.plain)
             .searchable(
                 text: $searchText,
-                placement: .navigationBarDrawer(displayMode: .automatic)
+                placement: .navigationBarDrawer(displayMode: .always)
             )
             .searchSuggestions {
                 ForEach(searchedData) { data in
@@ -86,10 +85,10 @@ struct Telainicio: View {
                 }
             }
             .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) { // Place the button on the right side
+                ToolbarItem(placement: .navigationBarTrailing) { 
                     NavigationLink(destination: {
                         ChatBot()
-                    }) {
+                    }){
                         Image(systemName: "questionmark.bubble")
                     }
                 }

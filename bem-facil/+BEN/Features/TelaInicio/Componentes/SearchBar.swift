@@ -12,7 +12,7 @@ struct SearchBar: View {
     var body: some View {
         
         HStack {
-            Image(systemName:"magnifyingglass")
+            Image(systemName: "magnifyingglass")
                 .foregroundColor(.secondary)
             
             TextField("Pesquise aqui...", text: $searchText)
@@ -20,10 +20,10 @@ struct SearchBar: View {
                 .overlay(
                     Image(systemName: "mic")
                         .padding()
-                        .offset(x:10)
+                        .offset(x: 10)
                         .foregroundColor(.black)
                         .opacity(searchText.isEmpty ? 0.0 : 1.0)
-                    ,alignment: .trailing
+                    , alignment: .trailing
                 )
         }
         .font(.headline)
@@ -33,7 +33,7 @@ struct SearchBar: View {
                 .fill(Color.white)
                 .shadow(
                     color: Color.black.opacity(0.15),
-                    radius: 10, x:0, y:0)
+                    radius: 10, x: 0, y: 0)
         )
         .padding()
     }

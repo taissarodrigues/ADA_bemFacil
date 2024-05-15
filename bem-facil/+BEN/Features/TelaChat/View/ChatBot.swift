@@ -44,8 +44,8 @@ struct ChatBot: View {
                             .foregroundColor(.white)
                             .background(Color.benUi(.azul).opacity(0.8))
                             .cornerRadius(10)
-                            .padding(.horizontal,16)
-                            .padding(.bottom,10)
+                            .padding(.horizontal, 16)
+                            .padding(.bottom, 10)
                     }
                 } else {
                     HStack {
@@ -53,8 +53,8 @@ struct ChatBot: View {
                             .padding()
                             .background(.gray.opacity(0.15))
                             .cornerRadius(10)
-                            .padding(.horizontal,16)
-                            .padding(.bottom,10)
+                            .padding(.horizontal, 16)
+                            .padding(.bottom, 10)
                         Spacer()
                     }
                 }

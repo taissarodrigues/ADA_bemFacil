@@ -17,11 +17,6 @@ struct MainView: View {
                 .tabItem {
                     Label("Programas", systemImage: "house.fill" )
                 }
-//            ChatBot()
-//                .environmentObject(chatBotViewModel)
-//                .tabItem {
-//                    Label("Dúvidas", systemImage: "questionmark")
-//                }
             TelaMapa()
                 .tabItem {
                     Label("Pontos", systemImage: "map.fill")

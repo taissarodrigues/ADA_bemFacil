@@ -24,6 +24,7 @@
 		E71851502BF39A9300621E46 /* TelaMapa.swift in Sources */ = {isa = PBXBuildFile; fileRef = E718514F2BF39A9300621E46 /* TelaMapa.swift */; };
 		E71851532BF3A47A00621E46 /* Mapa.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71851522BF3A47A00621E46 /* Mapa.swift */; };
 		E780E5FD2BF391AC003EB45E /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = E780E5FC2BF391AC003EB45E /* .swiftlint.yml */; };
+		E7F5093F2BF5462700D48B36 /* LocationDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F5093E2BF5462700D48B36 /* LocationDetailsView.swift */; };
 		E7F90B8F2BEA795800CC7A4C /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F90B8E2BEA795800CC7A4C /* MainView.swift */; };
 /* End PBXBuildFile section */
 
@@ -47,6 +48,7 @@
 		E718514F2BF39A9300621E46 /* TelaMapa.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelaMapa.swift; sourceTree = "<group>"; };
 		E71851522BF3A47A00621E46 /* Mapa.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mapa.swift; sourceTree = "<group>"; };
 		E780E5FC2BF391AC003EB45E /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
+		E7F5093E2BF5462700D48B36 /* LocationDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDetailsView.swift; sourceTree = "<group>"; };
 		E7F90B8E2BEA795800CC7A4C /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -243,6 +245,7 @@
 			isa = PBXGroup;
 			children = (
 				E718514F2BF39A9300621E46 /* TelaMapa.swift */,
+				E7F5093E2BF5462700D48B36 /* LocationDetailsView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -362,6 +365,7 @@
 				8C53CD062BED0A8200BCBDA2 /* File.swift in Sources */,
 				8C0AC5D12BEBAAE8005466CD /* Question.swift in Sources */,
 				CE42FEBD2BE901BF002C0792 /* SearchBar.swift in Sources */,
+				E7F5093F2BF5462700D48B36 /* LocationDetailsView.swift in Sources */,
 				E71851532BF3A47A00621E46 /* Mapa.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -502,6 +506,9 @@
 				INFOPLIST_FILE = "+BEN/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "+BEN";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Precisamos da sua localização";
+				INFOPLIST_KEY_NSLocationUsageDescription = "Precisamos da sua localização";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Precisamos da sua localização";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -533,6 +540,9 @@
 				INFOPLIST_FILE = "+BEN/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "+BEN";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Precisamos da sua localização";
+				INFOPLIST_KEY_NSLocationUsageDescription = "Precisamos da sua localização";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Precisamos da sua localização";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
