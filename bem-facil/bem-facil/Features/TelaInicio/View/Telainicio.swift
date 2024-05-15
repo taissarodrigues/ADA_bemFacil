@@ -5,15 +5,20 @@ struct Telainicio: View {
     @State private var isShowingFilter: Bool = false // Variável para mostrar/ocultar o Picker
     @State private var selectedCategory: String = "Todos" // Inicia com "Todos"
     
-    @State private var selection: CardInfoModel?
+    @State private var selection: ProgramsModel?
     
     let adaptiveColumns = Array(repeating: GridItem(.fixed(170)), count: 2)
     
-    var filteredData: [CardInfoModel] {
+    var searchedData: [ProgramsModel] {
+        guard !searchText.isEmpty else {return ProgramsModel.all }
+        return ProgramsModel.all.filter { $0.title.localizedCaseInsensitiveContains(searchText) }
+    }
+    
+    var filteredData: [ProgramsModel] {
         if selectedCategory == "Todos" {
-            return CardInfoModel.date
+            return ProgramsModel.all
         } else {
-            return CardInfoModel.date.filter { $0.subTitle == selectedCategory }
+            return ProgramsModel.all.filter { $0.category == selectedCategory }
         }
     }
     
@@ -22,48 +27,29 @@ struct Telainicio: View {
             List {
                 Section {
                     TabView {
-                        ForEach(0 ..< InitialCardInfo.mockInfos.count) { card in
-//                            ZStack {
-                                Text(InitialCardInfo.mockInfos[card].title)
-                                    .font(.system(size:28, weight:.bold ))
-                                    .padding(.trailing, 190)
-                                    .padding(.bottom, 100)
-                                
-//                            }
+                        ForEach(0..<3) { _ in
+                            Text("")
+                                .foregroundStyle(.white)
+                                .font(.largeTitle)
+                                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                                .background(.black)
+                                .cornerRadius(8.0)
                         }
-                        .tabViewStyle(.page(indexDisplayMode: .always))
-                        .frame(height: 200)
                     }
-                    
-                    Section {
-                        ScrollView(.horizontal) {
-                            HStack(spacing:18) {
-                                ForEach(0..<3) { _ in
-                                    Text("")
-                                        .foregroundStyle(.white)
-                                        .font(.largeTitle)
-                                        .frame(height: 180)
-                                        .containerRelativeFrame(.horizontal, count: 10, span: 8, spacing: 0)
-                                        .background(.black)
-                                        .cornerRadius(8.0)
-                                }
-                            }
-                            .scrollTargetLayout()
-                        }
-                        .scrollIndicators(.hidden)
-                        .scrollTargetBehavior(.viewAligned)
-                        
-                    }
-                    
-                    Section {
-                        LazyVGrid(columns: adaptiveColumns, spacing: 10) {
-                            ForEach(filteredData) { item in
-                                Button {
-                                    selection = item
-                                } label: {
-                                    CustomCard(model: item)
-                                        .compositingGroup()
-                                }
+                    .tabViewStyle(.page(indexDisplayMode: .always))
+                    .frame(height: 200)
+                }
+                .navigationTitle("Programas")
+                .navigationBarTitleDisplayMode(.inline)
+                
+                Section {
+                    LazyVGrid(columns: adaptiveColumns, spacing: 10) {
+                        ForEach(filteredData) { item in
+                            Button { 
+                                selection = item
+                            } label: {
+                                CustomCard(model: item)
+                                    .compositingGroup()
                             }
                         }
                         .buttonStyle(.plain)
@@ -87,6 +73,27 @@ struct Telainicio: View {
                 }
                 .listStyle(.plain)
                 .searchable(text: $searchText, placement: .navigationBarDrawer(displayMode: .always))
+            }
+            .listStyle(.plain)
+            .searchable(
+                text: $searchText,
+                placement: .navigationBarDrawer(displayMode: .automatic)
+            )
+            .searchSuggestions {
+                ForEach(searchedData) { data in
+                    NavigationLink(data.title) {
+                
+                    }
+                }
+            }
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    NavigationLink(destination: {
+                        ChatBot()
+                    }) {
+                        Image(systemName: "questionmark.bubble")
+                    }
+                }
             }
         }
     }

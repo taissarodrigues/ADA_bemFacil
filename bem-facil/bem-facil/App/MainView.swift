@@ -7,8 +7,7 @@
 
 import SwiftUI
 
-struct TabViewContent: View {
-    @ObservedObject var chatBotViewModel = ChatBotViewModel()
+struct MainView: View {
     
     var body: some View {
         
@@ -17,20 +16,15 @@ struct TabViewContent: View {
                 .tabItem {
                     Label("Programas", systemImage: "house.fill" )
                 }
-            ChatBot()
-                .environmentObject(chatBotViewModel)
-                .tabItem {
-                    Label("Dúvidas", systemImage: "questionmark")
-                }
-            Text("Pontos")
+            
+            TelaMapa()
                 .tabItem {
                     Label("Pontos", systemImage: "map.fill")
                 }
         }
-//        .accentColor()
     }
 }
 
 #Preview {
-    TabViewContent()
+    MainView()
 }
