@@ -1,4 +1,5 @@
 import SwiftUI
+import Foundation
 
 struct Telainicio: View {
     @State private var searchText: String = ""

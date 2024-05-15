@@ -17,58 +17,70 @@ struct TelaInfo: View {
     var body: some View {
         VStack {
             ScrollView {
-                HStack {
+                HStack (alignment: .top){
                     image
                         .resizable()
                         .aspectRatio(1, contentMode: .fit)
-                    
-                    
-                    
+                        .frame(width: 48.76, height: 41)
+
                     Text(title)
-                        .font(.system(size: 20))
+                        .font(.system(size: 28))
                         .font(.largeTitle)
-                    
                         .bold()
+//                        .padding(.leading)
                     
                 }
+                .padding(.top, -60)
                 .frame(height: 50)
-                
+               
+            
                 VStack (alignment: .leading) {
                     Text("Requisitos obrigatórios")
-                        .font(.title)
                         .font(.system(size: 20))
+                        .font(.title)
                         .bold()
                         .padding(.leading)
                         .padding(.bottom)
                     
-                    
                     ForEach(requirements, id: \.self) { info in
+                        
                         HStack {
-                            Text("•")
+                            Image(systemName: "circle.fill")
+                                .font(.system(size: 8))
+                            Text(info)
                                 .font(.system(size: 16))
                                 .padding(.leading)
+                                .padding(.bottom)
                         }
-                        Text(info)
-                            .font(.system(size: 16))
-                            .padding(.leading)
-                            .padding(.bottom)
-                        Spacer()
+//
                     }
                     
                     Text("Documentos necessários")
+                        .font(.system(size: 20))
                         .font(.title)
                         .bold()
                         .padding(.leading)
                         .padding(.bottom)
                     ForEach(documents, id: \.self) { info in
-                        Text("•\(info)")
-                            .font(.system(size: 16))
+                        
+                        HStack {
+                            Image(systemName: "circle.fill")
+                                .font(.system(size: 8))
+                            Text(info)
+                                .font(.system(size: 16))
                             .padding()
+                        }
                     }
+                    
                 }
                 
                 .padding()
                 .background(.white)
+                .cornerRadius(10)
+                .padding(.top, -30)
+                .frame(minWidth: 373, maxWidth: 317, alignment: .leading)
+               
+                
                 
                 VStack(alignment: .leading) {
                     Text("Links sugeridos")
@@ -76,39 +88,51 @@ struct TelaInfo: View {
                         .font(.title)
                         .bold()
                         .padding(.leading)
-                        .padding(.bottom)
+                        .padding(.bottom, -10)
                     
                     ForEach(links) { link in
                         Button {
-                            // abrir o safari e passar o link.linkURL pra ser aberto
+                            if let linkurl = URL(string: link.linkURL) {
+                                UIApplication.shared.open(linkurl)
+                            }
                         } label: {
                             HStack {
                                 Image(link.icon)
                                     .resizable()
                                     .aspectRatio(1, contentMode: .fit)
+                                    .frame(width: 25, height: 25)
                                 Text(link.shortName)
                                     .font(.system(size: 17))
-                                
                                     .bold()
                                     .underline()
                                 
                             }
-                            .frame(height: 25)
                             .padding()
+                            
+                            
                             .background {
                                 RoundedRectangle(cornerRadius: 5)
                                     .frame(width: 178,height: 38)
-                                    .foregroundStyle(.fundodois.opacity(0.5))
+                                    .foregroundStyle(.fundodois.opacity(0.2))
+                                    .shadow(radius: 3)
                             }
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                            //
                         }
+                        .buttonStyle(PlainButtonStyle())
                         .foregroundStyle(.black)
+                        
+                        
                     }
+                    
                 }
-                
+                .frame( maxWidth: 317, maxHeight: 95.19, alignment: .leading)
                 .padding()
                 .background(Color.white)
-                .frame(width: 373, height: 95.19)
                 .cornerRadius(10)
+                .padding(.top,-20)
+                .padding()
+                
             }
         }
         .background(Color.fundo)
