@@ -42,7 +42,6 @@ struct Telainicio: View {
                 .navigationTitle("Programas")
                 .navigationBarTitleDisplayMode(.inline)
                 
-                
                 Section {
                     LazyVGrid(columns: adaptiveColumns, spacing: 10) {
                         ForEach(filteredData) { item in
@@ -86,7 +85,7 @@ struct Telainicio: View {
                 }
             }
             .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) { // Place the button on the right side
+                ToolbarItem(placement: .navigationBarTrailing) {
                     NavigationLink(destination: {
                         ChatBot()
                     }) {
@@ -94,6 +93,7 @@ struct Telainicio: View {
                     }
                 }
             }
+            
         }
     }
 }

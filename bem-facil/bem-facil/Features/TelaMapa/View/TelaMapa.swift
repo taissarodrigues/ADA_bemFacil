@@ -13,25 +13,14 @@ struct TelaMapa: View {
     let ifce = CLLocationCoordinate2D(latitude: -3.743861083195101, longitude: -38.53585185163856)
     
     var body: some View {
-        
-        //        Frame
-        
-        VStack{
-            
-//            Text("Pontos de Coleta")
-
-        
-            Map(){
-                
+        VStack {
+            Text("Pontos de Coleta")
+            Map {
                 Marker("IFCE", coordinate: ifce)
-                
             }
-        
-            
         }
     }
 }
-    
 
 #Preview {
     TelaMapa()
