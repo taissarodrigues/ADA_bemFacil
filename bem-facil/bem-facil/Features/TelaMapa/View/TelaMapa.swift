@@ -1,24 +1,17 @@
 import SwiftUI
 import MapKit
 
-class locationDelegate: NSObject,ObservableObject,CLLocationManagerDelegate{
-    @Published var pins : [Pin] = []
-
-    // From here and down is new
+class locationDelegate: NSObject, ObservableObject, CLLocationManagerDelegate {
+    @Published var pins: [Pin] = []
     @Published var location: CLLocation?
-
     @State var hasSetRegion = false
-
     @Published var region = MKCoordinateRegion(
         center: CLLocationCoordinate2D(latitude: 38.898150, longitude: -77.034340),
         span: MKCoordinateSpan(latitudeDelta: 1, longitudeDelta: 1)
     )
-
-    // Checking authorization status...
-
+    
     func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
-
-        if manager.authorizationStatus == .authorizedWhenInUse{
+        if manager.authorizationStatus == .authorizedWhenInUse {
             print("Authorized")
             manager.startUpdatingLocation()
         } else {
@@ -26,16 +19,11 @@ class locationDelegate: NSObject,ObservableObject,CLLocationManagerDelegate{
             manager.requestWhenInUseAuthorization()
         }
     }
-
+    
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        // pins.append(Pin(location:locations.last!))
-
-        // From here and down is new
         if let location = locations.last {
-
             self.location = location
-
-            if hasSetRegion == false{
+            if hasSetRegion == false {
                 region = MKCoordinateRegion(center: location.coordinate, span: MKCoordinateSpan(latitudeDelta: 0.001, longitudeDelta: 0.001))
                 hasSetRegion = true
             }
@@ -43,31 +31,20 @@ class locationDelegate: NSObject,ObservableObject,CLLocationManagerDelegate{
     }
 }
 
-// Map pins for update
-struct Pin : Identifiable {
+struct Pin: Identifiable {
     var id = UUID().uuidString
-    var location : CLLocation
+    var location: CLLocation
 }
 
 extension UUID: Identifiable {
     public var id: UUID { self }
 }
 
-//extension MKCoordinateRegion {
-//    static var userRegion: MKCoordinateRegion {
-//        return .init(center: .userLocation,
-//                     latitudinalMeters: 20000,
-//                     longitudinalMeters: 20000)
-//    }
-//}
-
 extension String: Identifiable {
     public var id: String { self }
 }
 
 struct TelaMapa: View {
-    
-//    @State var selection: UUID?
     @State private var mapSelection: String?
     @State private var cameraPosition: MapCameraPosition = .userLocation(fallback: .automatic)
     @State private var showDetais = false
@@ -77,32 +54,29 @@ struct TelaMapa: View {
     @StateObject var managerDelegate = locationDelegate()
     
     var body: some View {
-        
         Map(position: $cameraPosition, selection: $mapSelection) {
             
             if let location = manager.location {
-                Annotation ("My location", coordinate: location.coordinate) {
+                Annotation("My location", coordinate: location.coordinate) {
                     ZStack {
                         Circle()
                             .frame(width: 32, height: 32)
                             .foregroundColor(.blue.opacity(0.25))
                         Circle()
                             .frame(width: 20, height: 20)
-                            .foregroundColor (.white)
+                            .foregroundColor(.white)
                         Circle()
                             .frame(width: 12, height: 12)
                             .foregroundColor(.blue)
                     }
                 }
             }
-            
             ForEach(0..<MapLocations.crasAllCases.count) { index in
                 let location = MapLocations.crasAllCases[index]
                 Marker(location.name, coordinate: location.coordinate)
                     .tint(.green)
                     .tag("cras_\(index)")
             }
-            
             ForEach(0..<MapLocations.farmaciasAllCases.count) { index in
                 let location = MapLocations.farmaciasAllCases[index]
                 Marker(location.name, coordinate: location.coordinate)
@@ -122,12 +96,6 @@ struct TelaMapa: View {
                 fatalError("AAAA")
             }
         }
-//        .sheet(isPresented: $showDetais, content: {
-//            LocationDetailsView(mapSelection: $mapSelection, show: $showDetais)
-//                .presentationDetents([.height(340)])
-//                .presentationBackgroundInteraction(.enabled(upThrough: .height(340)))
-//                .presentationCornerRadius(12)
-//        })
         .mapControls {
             MapUserLocationButton()
             MapPitchToggle()
@@ -137,27 +105,14 @@ struct TelaMapa: View {
             manager.requestWhenInUseAuthorization()
             manager.delegate = managerDelegate
         }
-            //        .sheet(item: $selection) { selectedUUID in
-//            if let selectedLocation = findLocation(by: selectedUUID) {
-//                VStack {
-//                    Text(selectedLocation.name)
-//                    Text("\(selectedLocation.coordinate.latitude), \(selectedLocation.coordinate.longitude)")
-//                    Text(selectedUUID.uuidString)
-//                }
-//            }
-//        }
     }
-    
-//    func findLocation(by id: UUID) -> MapLocations? {
-//            return (MapLocations.crasAllCases + MapLocations.farmaciasAllCases).first(where: { $0.id == id })
-//        }
 }
 
 struct MapLocations: Identifiable {
     let id = UUID()
     let name: String
     let coordinate: CLLocationCoordinate2D
-
+    
     init(_ name: String, coordinate: CLLocationCoordinate2D) {
         self.name = name
         self.coordinate = coordinate
@@ -207,7 +162,7 @@ struct MapLocations: Identifiable {
             }
         }
     }
-
+    
     static var farmaciasAllCases: [MapLocations] {
         return FarmaciaLocation.allCases.map { location in
             switch location {
@@ -258,7 +213,7 @@ struct MapLocations: Identifiable {
             }
         }
     }
-
+    
 }
 
 enum CrasLocation: CaseIterable {
@@ -281,7 +236,7 @@ enum CrasLocation: CaseIterable {
     case crasAntonioBezerra
     case crasGranjaPortugal
     case crasBarraCeara
-
+    
     var coordinate: CLLocationCoordinate2D {
         switch self {
         case .crasDende: return CLLocationCoordinate2D(latitude: -3.7731065673918454, longitude: -38.47732134440219)
@@ -330,7 +285,7 @@ enum FarmaciaLocation: CaseIterable {
     case farmaciaPagueMenos12
     case farmaciaPagueMenos13
     case farmaciaEufrazina
-
+    
     var coordinate: CLLocationCoordinate2D {
         switch self {
         case .farmaciaConviva: return CLLocationCoordinate2D(latitude: -3.830907825814421, longitude: -38.5708072616228)
