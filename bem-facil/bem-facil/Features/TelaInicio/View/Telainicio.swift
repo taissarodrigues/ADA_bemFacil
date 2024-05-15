@@ -27,17 +27,16 @@ struct Telainicio: View {
             List {
                 Section {
                     TabView {
-                        ForEach(0..<3) { _ in
-                            Text("")
-                                .foregroundStyle(.white)
-                                .font(.largeTitle)
-                                .frame(maxWidth: .infinity, maxHeight: .infinity)
-                                .background(.black)
+                        ForEach(0 ..< InitialCardInfo.mockInfos.count) {
+                            CardInicial(model: InitialCardInfo.mockInfos[$0])
                                 .cornerRadius(8.0)
+                                .frame(width: 520)
+                                .padding(.trailing)
                         }
                     }
                     .tabViewStyle(.page(indexDisplayMode: .always))
                     .frame(height: 200)
+                    .frame(width: 520)
                 }
                 .navigationTitle("Programas")
                 .navigationBarTitleDisplayMode(.inline)
@@ -57,8 +56,7 @@ struct Telainicio: View {
                     .navigationDestination(item: $selection) { selection in
                         TelaInfo(title: selection.title)
                     }
-                }
-            header: {
+                } header: {
                     HStack {
                         Text("Programas")
                         Spacer()

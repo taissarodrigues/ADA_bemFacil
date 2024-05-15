@@ -20,9 +20,11 @@ struct CardInicial: View {
                 
                 Spacer()
                 HStack {
-                    VStack {
+                    VStack (alignment: .leading) {
                         ForEach(model.info, id: \.self) { info in
                             Text(info)
+                                .padding(.leading, 30)
+                                .offset(/*@START_MENU_TOKEN@*/CGSize(width: 10.0, height: 10.0)/*@END_MENU_TOKEN@*/)
                         }
                     }
                     .padding(.leading,50)
@@ -32,7 +34,7 @@ struct CardInicial: View {
                         .resizable()
                         .frame(width: 100,height: 100)
                         .padding(.bottom)
-                        .padding(.trailing, 40)
+                        .padding(.trailing, 60)
                 }
             }
             .padding(.horizontal, 10)
@@ -41,7 +43,7 @@ struct CardInicial: View {
                     .fill(Color.white)
                     .frame(width: .infinity, height: 170)
                     .cornerRadius(25.0)
-                    .frame(width: 370, height: 170)
+                    .frame(width: 350, height: 140)
             )
         }
         .frame(width: .infinity, height: 140)
@@ -53,10 +55,21 @@ struct CardInicial: View {
 
 
 #Preview {
-    CardInicial(model: InitialCardInfo(title: "Pé de Meia", info: ["asdasdsadasdasdasd", "asdasdsadsadsadadasd"] , image: Image(.pedemeia)))
-        .background(content: {
-            Rectangle()
-                .frame(width: 500, height: 500)
-                .foregroundStyle(.blue)
-        })
+//    CardInicial(model: InitialCardInfo(title: "Pé de Meia", info: ["asdasdsadasdasdasd", "asdasdsadsadsadadasd"] , image: Image(.pedemeia)))
+//        .background(content: {
+//            Rectangle()
+//                .frame(width: 500, height: 500)
+//                .foregroundStyle(.blue)
+//        })
+    TabView {
+        ForEach(0 ..< InitialCardInfo.mockInfos.count) {
+            CardInicial(model: InitialCardInfo.mockInfos[$0])
+                .cornerRadius(8.0)
+                .frame(width: 530)
+                .padding(.trailing)
+                .border(.black)
+        }
+    }
+    .tabViewStyle(.page(indexDisplayMode: .always))
+    .frame(height: 200)
 }

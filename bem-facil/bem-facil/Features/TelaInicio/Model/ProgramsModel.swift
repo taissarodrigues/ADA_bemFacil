@@ -32,7 +32,7 @@ struct InitialCardInfo: Identifiable {
     var image: Image
     
     static let mockInfos: [InitialCardInfo] = [
-        InitialCardInfo(title: "Pé de meia", info: ["ser estudante de escola publica", "ser estudante de escola publica","ser estudante de escola publica"], image: Image(.pedemeia)),
+        InitialCardInfo(title: "Pé de meia", info: ["Ter idade entre 14 e 24 anos","Frequência escolar de no mínimo 80%","ser estudante de escola publica"], image: Image(.pedemeia)),
         InitialCardInfo(title: "Bolsa Familia", info: ["ser estudante de escola publica", "ser estudante de escola publica","ser estudante de escola publica"], image: Image(.pedemeia)),
         InitialCardInfo(title: "Bolsa Jovem", info: ["ser estudante de escola publica", "ser estudante de escola publica", "ser estudante de escola publica"], image: Image(.pedemeia))
     ]
