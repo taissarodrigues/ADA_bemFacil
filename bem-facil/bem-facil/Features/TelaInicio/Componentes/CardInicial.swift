@@ -14,20 +14,20 @@ struct CardInicial: View {
         HStack {
             ZStack {
                 Text(model.title)
-                    .font(.system(size:28, weight:.bold ))
+                    .font(.system(size: 28, weight: .bold ))
                     .padding(.trailing, 190)
                     .padding(.bottom, 100)
                 
                 Spacer()
                 HStack {
-                    VStack (alignment: .leading) {
+                    VStack(alignment: .leading) {
                         ForEach(model.info, id: \.self) { info in
                             Text(info)
                                 .padding(.leading, 30)
-                                .offset(/*@START_MENU_TOKEN@*/CGSize(width: 10.0, height: 10.0)/*@END_MENU_TOKEN@*/)
+                                .offset(CGSize(width: 10.0, height: 10.0))
                         }
                     }
-                    .padding(.leading,50)
+                    .padding(.leading, 50)
                     
                     Spacer()
                     Image(.pedemeia)
@@ -52,16 +52,7 @@ struct CardInicial: View {
     
 }
 
-
-
-
 #Preview {
-//    CardInicial(model: InitialCardInfo(title: "Pé de Meia", info: ["asdasdsadasdasdasd", "asdasdsadsadsadadasd"] , image: Image(.pedemeia)))
-//        .background(content: {
-//            Rectangle()
-//                .frame(width: 500, height: 500)
-//                .foregroundStyle(.blue)
-//        })
     TabView {
         ForEach(0..<InitialCardInfo.mockInfos.count) {
             CardInicial(model: InitialCardInfo.mockInfos[$0])
