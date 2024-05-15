@@ -16,22 +16,22 @@ struct TelaMapa: View {
         
         //        Frame
         
-        VStack (){
+        VStack{
             
-            Text("Pontos de Coleta")
-            
+//            Text("Pontos de Coleta")
+
         
             Map(){
                 
                 Marker("IFCE", coordinate: ifce)
                 
             }
-            .frame(width: 350, height: 350)
-            Spacer()
+        
             
         }
     }
 }
+    
 
 #Preview {
     TelaMapa()
