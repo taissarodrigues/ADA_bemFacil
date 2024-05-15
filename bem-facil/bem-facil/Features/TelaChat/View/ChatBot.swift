@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ChatBot: View {
     @State private var messageText = ""
-    @EnvironmentObject var viewModel: ChatBotViewModel
+    @StateObject var viewModel = ChatBotViewModel()
     
     var body: some View {
         VStack {
@@ -19,6 +19,7 @@ struct ChatBot: View {
             inputSection
                 .padding()
         }
+        .toolbar(.hidden, for: .tabBar)
     }
     
     private var titleBar: some View {
@@ -86,5 +87,4 @@ struct ChatBot: View {
 }
 #Preview {
     ChatBot()
-        .environmentObject(ChatBotViewModel())
 }
