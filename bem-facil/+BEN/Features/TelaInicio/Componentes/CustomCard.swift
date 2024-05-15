@@ -9,10 +9,10 @@ import SwiftUI
 
 struct CustomCard: View {
     
-    var model: Program
+    var model: ProgramsModel
     
     var body: some View {
-           ZStack {
+        ZStack {
                RoundedRectangle(cornerRadius: 20)
                    .foregroundColor(Color.benUi(.azulClaro))
                    .frame(width: 163, height: 163)
@@ -24,11 +24,11 @@ struct CustomCard: View {
                ]),
                startPoint: .center, endPoint: .bottom)
                .opacity(0.3)
-               .frame(width: 163,height: 163)
+               .frame(width: 163, height: 163)
                .mask(RoundedRectangle(cornerRadius: 20))
                
                VStack(alignment: .leading, spacing: -25) {
-                   Text(model.name)
+                   Text(model.title)
                        .font(.system(size: 17, weight: .bold))
                        .foregroundStyle(.white)
                        .shadow(radius: 5)
@@ -37,21 +37,22 @@ struct CustomCard: View {
                    Text(model.category)
                        .padding(5)
                        .font(.system(size: 12))
-                       .foregroundColor(Color.benUi(.azul))
+                       .foregroundColor(Color.azul)
                        .background(
-                           Rectangle()
-                                .cornerRadius(20)
-                               .foregroundColor(Color.benUi(.azulClaro))
-                       ).padding()
+                        Rectangle()
+                            .cornerRadius(20)
+                            .foregroundColor(Color.azulClaro)
+                       )
+                            .padding()
 
                }.frame(maxWidth: 163, alignment: .leading)
                    .frame(maxHeight: 163, alignment: .bottom)
            
-           }
+        }
            
-       }
-   }
+    }
+}
 
 #Preview {
-    CustomCard(model: ProgramsData.programs[0])
+    CustomCard(model: ProgramsModel(title: "Pé de Meia", category: "Educação", image: "pedemeia"))
 }

@@ -23,7 +23,7 @@ struct SearchBar: View {
                         .offset(x: 10)
                         .foregroundColor(.black)
                         .opacity(searchText.isEmpty ? 0.0 : 1.0)
-                    ,alignment: .trailing
+                    , alignment: .trailing
                 )
         }
         .font(.headline)

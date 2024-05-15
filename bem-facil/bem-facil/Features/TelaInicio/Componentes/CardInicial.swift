@@ -32,7 +32,7 @@ struct CardInicial: View {
                     Spacer()
                     Image(.pedemeia)
                         .resizable()
-                        .frame(width: 100,height: 100)
+                        .frame(width: 100, height: 100)
                         .padding(.bottom)
                         .padding(.trailing, 60)
                 }
@@ -41,12 +41,13 @@ struct CardInicial: View {
             .background(
                 Rectangle()
                     .fill(Color.white)
-                    .frame(width: .infinity, height: 170)
+                    .frame(height: 170)
                     .cornerRadius(25.0)
                     .frame(width: 350, height: 140)
             )
         }
-        .frame(width: .infinity, height: 140)
+        .frame(maxWidth: .infinity)
+        .frame(height: 140)
     }
     
 }
@@ -62,7 +63,7 @@ struct CardInicial: View {
 //                .foregroundStyle(.blue)
 //        })
     TabView {
-        ForEach(0 ..< InitialCardInfo.mockInfos.count) {
+        ForEach(0..<InitialCardInfo.mockInfos.count) {
             CardInicial(model: InitialCardInfo.mockInfos[$0])
                 .cornerRadius(8.0)
                 .frame(width: 530)

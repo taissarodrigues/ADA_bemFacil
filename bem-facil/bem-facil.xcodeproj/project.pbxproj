@@ -18,6 +18,10 @@
 		8C53CD062BED0A8200BCBDA2 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C53CD052BED0A8200BCBDA2 /* File.swift */; };
 		8C5929282BEA993D0037C38D /* ChatBot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5929272BEA993D0037C38D /* ChatBot.swift */; };
 		8C9593092BF255A600D187BA /* TelaInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9593082BF255A600D187BA /* TelaInfo.swift */; };
+		8CEDB7C72BF3A688001CF7CD /* ProgramsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEDB7C62BF3A688001CF7CD /* ProgramsData.swift */; };
+		8CF912092BF4F87D00DF9450 /* PageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF912082BF4F87D00DF9450 /* PageModel.swift */; };
+		8CF9120D2BF4FA5100DF9450 /* Onboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF9120C2BF4FA5100DF9450 /* Onboarding.swift */; };
+		8CF912112BF4FE0C00DF9450 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF912102BF4FE0C00DF9450 /* ContentView.swift */; };
 		CE42FEBD2BE901BF002C0792 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE42FEBC2BE901BF002C0792 /* SearchBar.swift */; };
 		CEAFED082BD94D9C00621FF3 /* bem_facilApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAFED072BD94D9C00621FF3 /* bem_facilApp.swift */; };
 		CEAFED0A2BD94D9C00621FF3 /* Telainicio.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAFED092BD94D9C00621FF3 /* Telainicio.swift */; };
@@ -26,6 +30,7 @@
 		E71851502BF39A9300621E46 /* TelaMapa.swift in Sources */ = {isa = PBXBuildFile; fileRef = E718514F2BF39A9300621E46 /* TelaMapa.swift */; };
 		E71851532BF3A47A00621E46 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71851522BF3A47A00621E46 /* SwiftUIView.swift */; };
 		E780E5FD2BF391AC003EB45E /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = E780E5FC2BF391AC003EB45E /* .swiftlint.yml */; };
+		E7F5093F2BF5462700D48B36 /* LocationDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F5093E2BF5462700D48B36 /* LocationDetailsView.swift */; };
 		E7F90B8F2BEA795800CC7A4C /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F90B8E2BEA795800CC7A4C /* MainView.swift */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +46,10 @@
 		8C53CD052BED0A8200BCBDA2 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		8C5929272BEA993D0037C38D /* ChatBot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBot.swift; sourceTree = "<group>"; };
 		8C9593082BF255A600D187BA /* TelaInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelaInfo.swift; sourceTree = "<group>"; };
+		8CEDB7C62BF3A688001CF7CD /* ProgramsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramsData.swift; sourceTree = "<group>"; };
+		8CF912082BF4F87D00DF9450 /* PageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageModel.swift; sourceTree = "<group>"; };
+		8CF9120C2BF4FA5100DF9450 /* Onboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding.swift; sourceTree = "<group>"; };
+		8CF912102BF4FE0C00DF9450 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		CE42FEBC2BE901BF002C0792 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		CE8949DE2BDFCBB000D6F5DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		CEAFED042BD94D9C00621FF3 /* bem-facil.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "bem-facil.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -51,6 +60,7 @@
 		E718514F2BF39A9300621E46 /* TelaMapa.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelaMapa.swift; sourceTree = "<group>"; };
 		E71851522BF3A47A00621E46 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
 		E780E5FC2BF391AC003EB45E /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
+		E7F5093E2BF5462700D48B36 /* LocationDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDetailsView.swift; sourceTree = "<group>"; };
 		E7F90B8E2BEA795800CC7A4C /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -111,6 +121,8 @@
 		4A893CE72BEE4DB20030430B /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				8CEDB7C62BF3A688001CF7CD /* ProgramsData.swift */,
+				8CF912082BF4F87D00DF9450 /* PageModel.swift */,
 				4A893CE82BEE4DC10030430B /* ProgramsModel.swift */,
 			);
 			path = Model;
@@ -181,6 +193,8 @@
 			isa = PBXGroup;
 			children = (
 				CEAFED092BD94D9C00621FF3 /* Telainicio.swift */,
+				8CF9120C2BF4FA5100DF9450 /* Onboarding.swift */,
+				8CF912102BF4FE0C00DF9450 /* ContentView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -248,6 +262,7 @@
 			isa = PBXGroup;
 			children = (
 				E718514F2BF39A9300621E46 /* TelaMapa.swift */,
+				E7F5093E2BF5462700D48B36 /* LocationDetailsView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -356,18 +371,23 @@
 				8C0AC5CA2BEB9F18005466CD /* TelaChatViewModel.swift in Sources */,
 				CEAFED0A2BD94D9C00621FF3 /* Telainicio.swift in Sources */,
 				8C5929282BEA993D0037C38D /* ChatBot.swift in Sources */,
+				8CEDB7C72BF3A688001CF7CD /* ProgramsData.swift in Sources */,
 				8C0AC5CF2BEBAA59005466CD /* TokenColor.swift in Sources */,
 				CEAFED082BD94D9C00621FF3 /* bem_facilApp.swift in Sources */,
 				4A4844982BDFB6C50075B6AF /* Models.swift in Sources */,
+				8CF912112BF4FE0C00DF9450 /* ContentView.swift in Sources */,
 				8C53CD042BED059B00BCBDA2 /* CustomCard.swift in Sources */,
 				8C9593092BF255A600D187BA /* TelaInfo.swift in Sources */,
 				E71851502BF39A9300621E46 /* TelaMapa.swift in Sources */,
 				E7F90B8F2BEA795800CC7A4C /* MainView.swift in Sources */,
 				4A893CE92BEE4DC10030430B /* ProgramsModel.swift in Sources */,
 				8C53CD062BED0A8200BCBDA2 /* File.swift in Sources */,
+				8CF912092BF4F87D00DF9450 /* PageModel.swift in Sources */,
+				8CF9120D2BF4FA5100DF9450 /* Onboarding.swift in Sources */,
 				8C0AC5D12BEBAAE8005466CD /* Question.swift in Sources */,
 				CE42FEBD2BE901BF002C0792 /* SearchBar.swift in Sources */,
 				27E7DC162BEA688A00B8F52B /* CardInicial.swift in Sources */,
+				E7F5093F2BF5462700D48B36 /* LocationDetailsView.swift in Sources */,
 				E71851532BF3A47A00621E46 /* SwiftUIView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -507,6 +527,10 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "bem-facil/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "+BEN";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Precisamos da sua localização";
+				INFOPLIST_KEY_NSLocationUsageDescription = "Precisamos da sua localização";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Precisamos da sua localização";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -537,6 +561,10 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "bem-facil/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "+BEN";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Precisamos da sua localização";
+				INFOPLIST_KEY_NSLocationUsageDescription = "Precisamos da sua localização";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Precisamos da sua localização";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";

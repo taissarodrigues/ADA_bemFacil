@@ -16,7 +16,6 @@ struct MainView: View {
                 .tabItem {
                     Label("Programas", systemImage: "house.fill" )
                 }
-            
             TelaMapa()
                 .tabItem {
                     Label("Pontos", systemImage: "map.fill")

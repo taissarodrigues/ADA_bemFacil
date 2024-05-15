@@ -1,24 +1,25 @@
 import SwiftUI
+import Foundation
 
 struct Telainicio: View {
     @State private var searchText: String = ""
     @State private var isShowingFilter: Bool = false // Variável para mostrar/ocultar o Picker
     @State private var selectedCategory: String = "Todos" // Inicia com "Todos"
     
-    @State private var selection: ProgramsModel?
-    
     let adaptiveColumns = Array(repeating: GridItem(.fixed(170)), count: 2)
+    
+    @State private var selection: Program?
     
     var searchedData: [ProgramsModel] {
         guard !searchText.isEmpty else {return ProgramsModel.all }
         return ProgramsModel.all.filter { $0.title.localizedCaseInsensitiveContains(searchText) }
     }
     
-    var filteredData: [ProgramsModel] {
+    var filteredData: [Program] {
         if selectedCategory == "Todos" {
-            return ProgramsModel.all
+            return ProgramsData.programs
         } else {
-            return ProgramsModel.all.filter { $0.category == selectedCategory }
+            return ProgramsData.programs.filter { $0.category == selectedCategory }
         }
     }
     
@@ -35,8 +36,10 @@ struct Telainicio: View {
                         }
                     }
                     .tabViewStyle(.page(indexDisplayMode: .always))
-                    .frame(height: 200)
+                    .frame(height: searchText.isEmpty ? 200 : 0)
                     .frame(width: 520)
+                    .opacity(searchText.isEmpty ? 1 : 0)
+                    .animation(.linear, value: searchText)
                 }
                 .navigationTitle("Programas")
                 .navigationBarTitleDisplayMode(.inline)
@@ -53,19 +56,25 @@ struct Telainicio: View {
                         }
                     }
                     .buttonStyle(.plain)
-                    .navigationDestination(item: $selection) { selection in
-                        TelaInfo(title: selection.title)
+                    .navigationDestination(item: $selection) { selectedItem in
+                        TelaInfo(
+                            title: selectedItem.name,
+                            image: Image(selectedItem.image),
+                            requirements: selectedItem.requirements,
+                            documents: selectedItem.documents,
+                            links: selectedItem.urls
+                        )
                     }
+                    
                 } header: {
                     HStack {
-                        Text("Programas")
+                        Text("Lista de Programas")
                         Spacer()
                         Picker("", selection: $selectedCategory) {
                             ForEach(["Todos", "Assistência Social", "Cultura", "Educação", "Saúde"], id: \.self) {
                                 Text($0)
                             }
                         }
-                        .pickerStyle(MenuPickerStyle())
                     }
                     .headerProminence(.increased)
                     
@@ -73,15 +82,23 @@ struct Telainicio: View {
                 .listStyle(.plain)
                 .searchable(text: $searchText, placement: .navigationBarDrawer(displayMode: .always))
             }
+
             .listStyle(.plain)
             .searchable(
                 text: $searchText,
-                placement: .navigationBarDrawer(displayMode: .automatic)
+                placement: .navigationBarDrawer(displayMode: .always)
             )
             .searchSuggestions {
                 ForEach(searchedData) { data in
                     NavigationLink(data.title) {
-                        
+                        let program = ProgramsData.programs.first { $0.image == data.image }!
+                        TelaInfo(
+                            title: program.name,
+                            image: Image(program.image),
+                            requirements: program.requirements,
+                            documents: program.documents,
+                            links: program.urls
+                        )
                     }
                 }
             }
@@ -89,18 +106,20 @@ struct Telainicio: View {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     NavigationLink(destination: {
                         ChatBot()
-                    }) {
+                    }){
                         Image(systemName: "questionmark.bubble")
                     }
                 }
             }
         }
+        .listStyle(.plain)
+        .searchable(
+            text: $searchText,
+            placement: .navigationBarDrawer(displayMode: .always)
+        )
     }
 }
 
-
-struct Telainicio_Previews: PreviewProvider {
-    static var previews: some View {
-        Telainicio()
-    }
+#Preview {
+    Telainicio()
 }
