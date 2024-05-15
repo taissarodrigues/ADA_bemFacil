@@ -9,59 +9,51 @@ import SwiftUI
 
 //Aqui é so o componente, não os scr
 struct CardInicial: View {
-    var model: CardInfoModel
+    var model: InitialCardInfo
     var body: some View {
-        
-        ScrollView(.horizontal) {
-            HStack {
+        HStack {
+            ZStack {
+                Text(model.title)
+                    .font(.system(size:28, weight:.bold ))
+                    .padding(.trailing, 190)
+                    .padding(.bottom, 100)
                 
-                ForEach(0 ..< InitialCardInfo.mockInfos.count) { card in
-                    ZStack {
-                        Text(InitialCardInfo.mockInfos[card].title)
-                            .font(.system(size:28, weight:.bold ))
-                            .padding(.trailing, 190)
-                            .padding(.bottom, 100)
-                        
-                        Spacer()
-                        HStack {
-                            VStack {
-                                ForEach(0 ..< InitialCardInfo.mockInfos[card].info.count) { info in
-                                    Text(InitialCardInfo.mockInfos[card].info[info])
-                                }
-                            }
-                            .padding(.leading, 50)
-                            
-                            Spacer()
-                            Image(.pedemeia)
-                                .resizable()
-                                .frame(width: 100,height: 100)
-                                .padding(.bottom)
-                                .padding(.trailing, 40)
+                Spacer()
+                HStack {
+                    VStack {
+                        ForEach(model.info, id: \.self) { info in
+                            Text(info)
                         }
                     }
-                    .padding(.horizontal, 10)
-                    .background(
-                        Rectangle()
-                            .fill(Color.white)
-                            .frame(width: .infinity, height: 170)
-                            .cornerRadius(25.0)
-                            .frame(width: 370, height: 170)
-                    )
-                    .frame(width: .infinity, height: 200)
+                    .padding(.leading,50)
                     
+                    Spacer()
+                    Image(.pedemeia)
+                        .resizable()
+                        .frame(width: 100,height: 100)
+                        .padding(.bottom)
+                        .padding(.trailing, 40)
                 }
             }
+            .padding(.horizontal, 10)
+            .background(
+                Rectangle()
+                    .fill(Color.white)
+                    .frame(width: .infinity, height: 170)
+                    .cornerRadius(25.0)
+                    .frame(width: 370, height: 170)
+            )
         }
-        .scrollIndicators(.hidden)
+        .frame(width: .infinity, height: 140)
     }
     
 }
-        
-            
+
+
 
 
 #Preview {
-    CardInicial(model: CardInfoModel(title: "", subTitle: "" , image: "star.fill"))
+    CardInicial(model: InitialCardInfo(title: "Pé de Meia", info: ["asdasdsadasdasdasd", "asdasdsadsadsadadasd"] , image: Image(.pedemeia)))
         .background(content: {
             Rectangle()
                 .frame(width: 500, height: 500)

@@ -87,50 +87,6 @@ struct Telainicio: View {
                 }
                 .listStyle(.plain)
                 .searchable(text: $searchText, placement: .navigationBarDrawer(displayMode: .always))
-                
-                
-                VStack(alignment: .leading) {
-                    
-                    
-                    SearchBar(searchText: searchText)
-                    
-                    
-                    
-                    HStack() {
-                        Text("Programas")
-                            .font(.title)
-                            .fontWeight(.bold)
-                            .multilineTextAlignment(.leading)
-                        //                        .padding(.leading)
-                        Spacer()
-                        Picker("Categoria", selection: $selectedCategory) {
-                            ForEach(["Todos", "Assistência Social", "Cultura", "Educação", "Saúde"], id: \.self) {
-                                Text($0)
-                            }
-                        }
-                        .pickerStyle(MenuPickerStyle())
-                        .padding(.trailing, 10)
-                        
-                        
-                        
-                        //                    Image(systemName: "line.horizontal.3z.decrease.circle")
-                        //                        .foregroundColor(.blue)
-                        //                        .padding(.trailing)
-                    }
-                    .padding(.leading, 30)
-                    
-                    ScrollView {
-                        LazyVGrid(columns: adaptiveColumns, spacing: 10) {
-                            ForEach(filteredData) { item in
-                                NavigationLink(destination: TelaInfo(title: item.title)) {
-                                    CustomCard(model: item)
-                                }
-                            }
-                        }
-                        .navigationTitle(Text(""))
-                    }
-                }
-                
             }
         }
     }
