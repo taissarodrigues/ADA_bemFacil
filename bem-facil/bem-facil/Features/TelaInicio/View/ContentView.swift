@@ -30,8 +30,8 @@ struct ContentView: View {
                             Button("Next", action: incrementPage)
                         }
                     }
+                    .tag(page.tag)
                 }
-                .tag(page.tag)
                 .tabViewStyle(.page)
             }
             // Navegação para a tela inicial quando o botão "Sign up" é clicado

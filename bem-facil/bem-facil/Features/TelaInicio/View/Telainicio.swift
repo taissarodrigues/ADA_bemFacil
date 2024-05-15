@@ -9,6 +9,12 @@ struct Telainicio: View {
     let adaptiveColumns = Array(repeating: GridItem(.fixed(170)), count: 2)
     
     @State private var selection: Program?
+    
+    var searchedData: [ProgramsModel] {
+        guard !searchText.isEmpty else {return ProgramsModel.all }
+        return ProgramsModel.all.filter { $0.title.localizedCaseInsensitiveContains(searchText) }
+    }
+    
     var filteredData: [Program] {
         if selectedCategory == "Todos" {
             return ProgramsData.programs
@@ -16,21 +22,6 @@ struct Telainicio: View {
             return ProgramsData.programs.filter { $0.category == selectedCategory }
         }
     }
-    
-//    @State private var selection: CardInfoModel?
-//    var cards: [CardInfoModel] {
-//        ProgramsData.programs.map { program in
-//            CardInfoModel(title: program.name, subTitle: program.category, image: program.image)
-//        }
-//    }
-//    
-//    var filteredData: [CardInfoModel] {
-//        if selectedCategory == "Todos" {
-//            return CardInfoModel.date
-//        } else {
-//            return CardInfoModel.date.filter { $0.subTitle == selectedCategory }
-//        }
-//    }
     
     var body: some View {
         NavigationStack {
@@ -49,6 +40,9 @@ struct Telainicio: View {
                     .tabViewStyle(.page(indexDisplayMode: .always))
                     .frame(height: 200)
                 }
+                .navigationTitle("Programas")
+                .navigationBarTitleDisplayMode(.inline)
+                
                 Section {
                     LazyVGrid(columns: adaptiveColumns, spacing: 10) {
                         ForEach(filteredData) { item in
@@ -73,7 +67,7 @@ struct Telainicio: View {
                     
                 } header: {
                     HStack {
-                        Text("Programas")
+                        Text("Lista de Programas")
                         Spacer()
                         Picker("Categoria", selection: $selectedCategory) {
                             ForEach(["Todos", "Assistência Social", "Cultura", "Educação", "Saúde"], id: \.self) {
@@ -85,6 +79,29 @@ struct Telainicio: View {
                 }
                 .headerProminence(.increased)
             }
+
+            .listStyle(.plain)
+            .searchable(
+                text: $searchText,
+                placement: .navigationBarDrawer(displayMode: .always)
+            )
+            .searchSuggestions {
+                ForEach(searchedData) { data in
+                    NavigationLink(data.title) {
+                
+                    }
+                }
+            }
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    NavigationLink(destination: {
+                        ChatBot()
+                    }){
+                        Image(systemName: "questionmark.bubble")
+                    }
+                }
+            }
+            
         }
         .listStyle(.plain)
         .searchable(text: $searchText, placement: .navigationBarDrawer(displayMode: .always))
