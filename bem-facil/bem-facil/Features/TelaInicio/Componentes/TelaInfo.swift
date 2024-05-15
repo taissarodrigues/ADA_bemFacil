@@ -17,24 +17,21 @@ struct TelaInfo: View {
     var body: some View {
         VStack {
             ScrollView {
-                HStack (alignment: .top){
+                HStack(alignment: .top) {
                     image
                         .resizable()
                         .aspectRatio(1, contentMode: .fit)
                         .frame(width: 48.76, height: 41)
-
+                    
                     Text(title)
                         .font(.system(size: 28))
                         .font(.largeTitle)
                         .bold()
-//                        .padding(.leading)
-                    
                 }
                 .padding(.top, -60)
                 .frame(height: 50)
-               
-            
-                VStack (alignment: .leading) {
+                
+                VStack(alignment: .leading) {
                     Text("Requisitos obrigatórios")
                         .font(.system(size: 20))
                         .font(.title)
@@ -43,45 +40,38 @@ struct TelaInfo: View {
                         .padding(.bottom)
                     
                     ForEach(requirements, id: \.self) { info in
-                        
                         HStack {
                             Image(systemName: "circle.fill")
                                 .font(.system(size: 8))
+                            
                             Text(info)
                                 .font(.system(size: 16))
                                 .padding(.leading)
                                 .padding(.bottom)
                         }
-//
                     }
-                    
                     Text("Documentos necessários")
                         .font(.system(size: 20))
                         .font(.title)
                         .bold()
                         .padding(.leading)
                         .padding(.bottom)
+
                     ForEach(documents, id: \.self) { info in
-                        
                         HStack {
                             Image(systemName: "circle.fill")
                                 .font(.system(size: 8))
                             Text(info)
                                 .font(.system(size: 16))
-                            .padding()
+                                .padding()
                         }
                     }
-                    
                 }
-                
                 .padding()
                 .background(.white)
                 .cornerRadius(10)
                 .padding(.top, -30)
-                //.frame(minWidth: 373, maxWidth: 317, alignment: .leading)
-               
-                
-                
+
                 VStack(alignment: .leading) {
                     Text("Links sugeridos")
                         .font(.system(size: 20))
@@ -108,31 +98,24 @@ struct TelaInfo: View {
                                 
                             }
                             .padding()
-                            
-                            
                             .background {
                                 RoundedRectangle(cornerRadius: 5)
-                                    .frame(width: 178,height: 38)
+                                    .frame(width: 178, height: 38)
                                     .foregroundStyle(.fundodois.opacity(0.2))
                                     .shadow(radius: 3)
                             }
                             .frame(maxWidth: .infinity, alignment: .leading)
-                            //
                         }
                         .buttonStyle(PlainButtonStyle())
                         .foregroundStyle(.black)
-                        
-                        
                     }
-                    
                 }
                 .frame( maxWidth: 317, maxHeight: 95.19, alignment: .leading)
                 .padding()
                 .background(Color.white)
                 .cornerRadius(10)
-                .padding(.top,-20)
+                .padding(.top, -20)
                 .padding()
-                
             }
         }
         .background(Color.fundo)
@@ -140,9 +123,5 @@ struct TelaInfo: View {
 }
 
 #Preview {
-    TelaInfo(title: "Pé de Meia", image: Image("pedemeia"), requirements: ["Estar matriculada em escola pública e ter baixa renda, ou;","Estar em situação de rua, ou;",
-                                                                           "Estar inscrita no Cadastro único (CadÚnico)."], documents: ["Documento de identificação oficial com foto e o número do CPF;","Autorização do programa dignidade menstrual, gerada pelo app: Meus SUS digital."
-                                                                                                                                       ],links: [
-                                                                                                                                        ProgramLink(icon: "sus", shortName: "Meu SUS digital", linkURL: "google.com")
-                                                                                                                                       ])
+    TelaInfo(title: "Pé de Meia", image: Image("pedemeia"), requirements: ["Estar matriculada em escola pública e ter baixa renda, ou;", "Estar em situação de rua, ou;", "Estar inscrita no Cadastro único (CadÚnico)."], documents: ["Documento de identificação oficial com foto e o número do CPF;", "Autorização do programa dignidade menstrual, gerada pelo app: Meus SUS digital."], links: [ProgramLink(icon: "sus", shortName: "Meu SUS digital", linkURL: "google.com")])
 }

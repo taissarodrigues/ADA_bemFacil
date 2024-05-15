@@ -106,7 +106,7 @@ struct Telainicio: View {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     NavigationLink(destination: {
                         ChatBot()
-                    }){
+                    }) {
                         Image(systemName: "questionmark.bubble")
                     }
                 }
