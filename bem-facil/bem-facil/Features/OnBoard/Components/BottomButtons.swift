@@ -19,6 +19,13 @@ struct BottomButtons: View {
                         .frame(width: 335, height: 48)
                         .clipShape(.rect(cornerRadius: 16))
                 )
+                .onTapGesture {
+                    viewModel.changeTabIndex()
+                    viewModel.changeRightText()
+                    if viewModel.currentTab > 3 {
+                        viewModel.onBoardingToggle()
+                    }
+                }
                 .padding(.bottom, 36)
             
             Text("Direto aos benefícios")
@@ -33,6 +40,9 @@ struct BottomButtons: View {
                                 .stroke(.mainBlue, lineWidth: 1)
                         )
                 )
+                .onTapGesture {
+                    viewModel.onBoardingToggle()
+                }
         }
         .font(.system(size: 14, weight: .bold))
     }

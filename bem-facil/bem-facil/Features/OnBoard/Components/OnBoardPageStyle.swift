@@ -13,7 +13,7 @@ struct OnBoardPageStyle: View {
     var body: some View {
         VStack(alignment: .center) {
             Image(.logo)
-                .padding(.top, 60)
+                .padding(.top, 50)
                 .padding(.bottom, 50)
             
             Image(onBoardInfos.image)

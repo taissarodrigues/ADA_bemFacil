@@ -11,6 +11,11 @@ struct OnBoardView: View {
     @StateObject var viewModel = OnBoardViewModel()
     @State private var animate: Bool = true
     
+    init () {
+        UIPageControl.appearance().currentPageIndicatorTintColor = UIColor(.mainBlue)
+        UIPageControl.appearance().pageIndicatorTintColor = .white
+    }
+    
     var body: some View {
         ZStack {
             Color.onBoardBackGround.ignoresSafeArea()
@@ -30,6 +35,9 @@ struct OnBoardView: View {
                 .tabViewStyle(PageTabViewStyle())
                 .indexViewStyle(.page)
                 .transition(.slide)
+                
+                BottomButtons(viewModel: viewModel)
+                    .padding(.bottom, 25)
             }
         }
         .onChange(of: viewModel.currentTab, {
