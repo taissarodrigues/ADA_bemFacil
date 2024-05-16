@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		27E7DC162BEA688A00B8F52B /* CardInicial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E7DC152BEA688A00B8F52B /* CardInicial.swift */; };
 		4A4196CE2BF5820600435D4C /* OnBoardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4196CD2BF5820600435D4C /* OnBoardModel.swift */; };
+		4A4196D22BF5831D00435D4C /* OnBoardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4196D12BF5831D00435D4C /* OnBoardViewModel.swift */; };
 		4A4844982BDFB6C50075B6AF /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4844972BDFB6C50075B6AF /* Models.swift */; };
 		4A893CE92BEE4DC10030430B /* ProgramsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A893CE82BEE4DC10030430B /* ProgramsModel.swift */; };
 		8C0AC5CA2BEB9F18005466CD /* TelaChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0AC5C92BEB9F18005466CD /* TelaChatViewModel.swift */; };
@@ -35,6 +36,7 @@
 /* Begin PBXFileReference section */
 		27E7DC152BEA688A00B8F52B /* CardInicial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardInicial.swift; sourceTree = "<group>"; };
 		4A4196CD2BF5820600435D4C /* OnBoardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardModel.swift; sourceTree = "<group>"; };
+		4A4196D12BF5831D00435D4C /* OnBoardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardViewModel.swift; sourceTree = "<group>"; };
 		4A4844972BDFB6C50075B6AF /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		4A893CE82BEE4DC10030430B /* ProgramsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramsModel.swift; sourceTree = "<group>"; };
 		8C0AC5C92BEB9F18005466CD /* TelaChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelaChatViewModel.swift; sourceTree = "<group>"; };
@@ -71,12 +73,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4A4196CC2BF581A800435D4C /* OnBoarding */ = {
+		4A4196CC2BF581A800435D4C /* OnBoard */ = {
+			isa = PBXGroup;
+			children = (
+				4A4196D02BF5830800435D4C /* ViewModel */,
+				4A4196CF2BF5830000435D4C /* Model */,
+			);
+			path = OnBoard;
+			sourceTree = "<group>";
+		};
+		4A4196CF2BF5830000435D4C /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				4A4196CD2BF5820600435D4C /* OnBoardModel.swift */,
 			);
-			path = OnBoarding;
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4A4196D02BF5830800435D4C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				4A4196D12BF5831D00435D4C /* OnBoardViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		4A4844912BDFB65E0075B6AF /* Resources */ = {
@@ -115,7 +134,7 @@
 		4A4844992BDFB6D00075B6AF /* Features */ = {
 			isa = PBXGroup;
 			children = (
-				4A4196CC2BF581A800435D4C /* OnBoarding */,
+				4A4196CC2BF581A800435D4C /* OnBoard */,
 				E718514D2BF399DA00621E46 /* TelaMapa */,
 				8C59292D2BEABF2D0037C38D /* TelaChat */,
 				8CAE5B942BEA52C4005B45E4 /* TelaInicio */,
@@ -380,6 +399,7 @@
 				4A4844982BDFB6C50075B6AF /* Models.swift in Sources */,
 				8CF912112BF4FE0C00DF9450 /* ContentView.swift in Sources */,
 				8C53CD042BED059B00BCBDA2 /* CustomCard.swift in Sources */,
+				4A4196D22BF5831D00435D4C /* OnBoardViewModel.swift in Sources */,
 				8C9593092BF255A600D187BA /* TelaInfo.swift in Sources */,
 				E71851502BF39A9300621E46 /* TelaMapa.swift in Sources */,
 				E7F90B8F2BEA795800CC7A4C /* MainView.swift in Sources */,
