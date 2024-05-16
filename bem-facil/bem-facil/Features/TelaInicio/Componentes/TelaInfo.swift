@@ -28,7 +28,7 @@ struct TelaInfo: View {
                         .font(.largeTitle)
                         .bold()
                 }
-                .padding(.top, -60)
+                .padding(.top, -25)
                 .frame(height: 50)
                 
                 VStack(alignment: .leading) {
@@ -70,7 +70,7 @@ struct TelaInfo: View {
                 .padding()
                 .background(.white)
                 .cornerRadius(10)
-                .padding(.top, -30)
+                .padding(.top, -10)
 
                 VStack(alignment: .leading) {
                     Text("Links sugeridos")
