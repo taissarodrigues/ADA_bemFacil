@@ -23,6 +23,11 @@ struct Telainicio: View {
         }
     }
     
+    init () {
+        UIPageControl.appearance().currentPageIndicatorTintColor = UIColor(.mainBlue)
+        UIPageControl.appearance().pageIndicatorTintColor = UIColor.black.withAlphaComponent(0.2)
+    }
+    
     var body: some View {
         NavigationStack {
             List {
