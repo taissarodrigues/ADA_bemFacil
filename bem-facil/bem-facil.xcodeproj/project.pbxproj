@@ -10,6 +10,8 @@
 		27E7DC162BEA688A00B8F52B /* CardInicial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E7DC152BEA688A00B8F52B /* CardInicial.swift */; };
 		4A4196CE2BF5820600435D4C /* OnBoardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4196CD2BF5820600435D4C /* OnBoardModel.swift */; };
 		4A4196D22BF5831D00435D4C /* OnBoardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4196D12BF5831D00435D4C /* OnBoardViewModel.swift */; };
+		4A4196D52BF5844D00435D4C /* OnBoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4196D42BF5844D00435D4C /* OnBoardView.swift */; };
+		4A4196D82BF5857300435D4C /* OnBoardPageStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4196D72BF5857300435D4C /* OnBoardPageStyle.swift */; };
 		4A4844982BDFB6C50075B6AF /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4844972BDFB6C50075B6AF /* Models.swift */; };
 		4A893CE92BEE4DC10030430B /* ProgramsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A893CE82BEE4DC10030430B /* ProgramsModel.swift */; };
 		8C0AC5CA2BEB9F18005466CD /* TelaChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0AC5C92BEB9F18005466CD /* TelaChatViewModel.swift */; };
@@ -20,7 +22,6 @@
 		8C5929282BEA993D0037C38D /* ChatBot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5929272BEA993D0037C38D /* ChatBot.swift */; };
 		8C9593092BF255A600D187BA /* TelaInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9593082BF255A600D187BA /* TelaInfo.swift */; };
 		8CEDB7C72BF3A688001CF7CD /* ProgramsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEDB7C62BF3A688001CF7CD /* ProgramsData.swift */; };
-		8CF912112BF4FE0C00DF9450 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF912102BF4FE0C00DF9450 /* ContentView.swift */; };
 		CE42FEBD2BE901BF002C0792 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE42FEBC2BE901BF002C0792 /* SearchBar.swift */; };
 		CEAFED082BD94D9C00621FF3 /* bem_facilApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAFED072BD94D9C00621FF3 /* bem_facilApp.swift */; };
 		CEAFED0A2BD94D9C00621FF3 /* Telainicio.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAFED092BD94D9C00621FF3 /* Telainicio.swift */; };
@@ -37,6 +38,8 @@
 		27E7DC152BEA688A00B8F52B /* CardInicial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardInicial.swift; sourceTree = "<group>"; };
 		4A4196CD2BF5820600435D4C /* OnBoardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardModel.swift; sourceTree = "<group>"; };
 		4A4196D12BF5831D00435D4C /* OnBoardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardViewModel.swift; sourceTree = "<group>"; };
+		4A4196D42BF5844D00435D4C /* OnBoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardView.swift; sourceTree = "<group>"; };
+		4A4196D72BF5857300435D4C /* OnBoardPageStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardPageStyle.swift; sourceTree = "<group>"; };
 		4A4844972BDFB6C50075B6AF /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		4A893CE82BEE4DC10030430B /* ProgramsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramsModel.swift; sourceTree = "<group>"; };
 		8C0AC5C92BEB9F18005466CD /* TelaChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelaChatViewModel.swift; sourceTree = "<group>"; };
@@ -47,7 +50,6 @@
 		8C5929272BEA993D0037C38D /* ChatBot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBot.swift; sourceTree = "<group>"; };
 		8C9593082BF255A600D187BA /* TelaInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelaInfo.swift; sourceTree = "<group>"; };
 		8CEDB7C62BF3A688001CF7CD /* ProgramsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramsData.swift; sourceTree = "<group>"; };
-		8CF912102BF4FE0C00DF9450 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		CE42FEBC2BE901BF002C0792 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		CE8949DE2BDFCBB000D6F5DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		CEAFED042BD94D9C00621FF3 /* bem-facil.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "bem-facil.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -76,8 +78,10 @@
 		4A4196CC2BF581A800435D4C /* OnBoard */ = {
 			isa = PBXGroup;
 			children = (
-				4A4196D02BF5830800435D4C /* ViewModel */,
 				4A4196CF2BF5830000435D4C /* Model */,
+				4A4196D02BF5830800435D4C /* ViewModel */,
+				4A4196D62BF5855200435D4C /* Components */,
+				4A4196D32BF5843900435D4C /* View */,
 			);
 			path = OnBoard;
 			sourceTree = "<group>";
@@ -96,6 +100,22 @@
 				4A4196D12BF5831D00435D4C /* OnBoardViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		4A4196D32BF5843900435D4C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4A4196D42BF5844D00435D4C /* OnBoardView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4A4196D62BF5855200435D4C /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				4A4196D72BF5857300435D4C /* OnBoardPageStyle.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		4A4844912BDFB65E0075B6AF /* Resources */ = {
@@ -216,7 +236,6 @@
 			isa = PBXGroup;
 			children = (
 				CEAFED092BD94D9C00621FF3 /* Telainicio.swift */,
-				8CF912102BF4FE0C00DF9450 /* ContentView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -390,6 +409,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A4196D82BF5857300435D4C /* OnBoardPageStyle.swift in Sources */,
 				8C0AC5CA2BEB9F18005466CD /* TelaChatViewModel.swift in Sources */,
 				CEAFED0A2BD94D9C00621FF3 /* Telainicio.swift in Sources */,
 				8C5929282BEA993D0037C38D /* ChatBot.swift in Sources */,
@@ -397,7 +417,6 @@
 				8C0AC5CF2BEBAA59005466CD /* TokenColor.swift in Sources */,
 				CEAFED082BD94D9C00621FF3 /* bem_facilApp.swift in Sources */,
 				4A4844982BDFB6C50075B6AF /* Models.swift in Sources */,
-				8CF912112BF4FE0C00DF9450 /* ContentView.swift in Sources */,
 				8C53CD042BED059B00BCBDA2 /* CustomCard.swift in Sources */,
 				4A4196D22BF5831D00435D4C /* OnBoardViewModel.swift in Sources */,
 				8C9593092BF255A600D187BA /* TelaInfo.swift in Sources */,
@@ -406,6 +425,7 @@
 				4A893CE92BEE4DC10030430B /* ProgramsModel.swift in Sources */,
 				8C53CD062BED0A8200BCBDA2 /* File.swift in Sources */,
 				8C0AC5D12BEBAAE8005466CD /* Question.swift in Sources */,
+				4A4196D52BF5844D00435D4C /* OnBoardView.swift in Sources */,
 				CE42FEBD2BE901BF002C0792 /* SearchBar.swift in Sources */,
 				27E7DC162BEA688A00B8F52B /* CardInicial.swift in Sources */,
 				4A4196CE2BF5820600435D4C /* OnBoardModel.swift in Sources */,

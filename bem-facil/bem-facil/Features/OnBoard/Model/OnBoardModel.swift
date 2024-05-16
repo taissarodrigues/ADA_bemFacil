@@ -8,13 +8,13 @@
 import Foundation
 struct OnBoardModel: Identifiable, Hashable {
     let id = UUID()
-    let name: String
+    let title: String
     let description: String
-    let imageUrl: String
+    let image: String
     
-    static var samplePages: [OnBoardModel] = [
-        OnBoardModel(name: "Seu canal de informação", description: "bla bla bla texto cruel aqui bla bla bla texto cruelaquibla bla bla texto cruel aquibla bla bla texto cruel aquibla bla bla texto cruel aquibla bla bla .", imageUrl: "info1"),
-        OnBoardModel(name: "Sem burocracia", description: "bla bla bla texto cruel aqui bla bla bla texto cruel aquibla bla bla texto cruel aquibla bla bla texto cruel aquibla bla bla texto cruel aquibla bla bla .", imageUrl: "info2"),
-        OnBoardModel(name: "Tudo isso em um só local", description: "bla bla bla texto cruel aqui bla bla bla texto cruel aquibla bla bla texto cruel aquibla bla bla texto cruel aquibla bla bla texto cruel aquibla bla bla .", imageUrl: "info2")
+    static let list: [OnBoardModel] = [
+        OnBoardModel(title: "Seu canal de informação", description: "bla bla bla texto cruel aqui bla bla bla texto cruelaquibla bla bla texto cruel aquibla bla bla texto cruel aquibla bla bla texto cruel aquibla bla bla .", image: "info1"),
+        OnBoardModel(title: "Sem burocracia", description: "bla bla bla texto cruel aqui bla bla bla texto cruel aquibla bla bla texto cruel aquibla bla bla texto cruel aquibla bla bla texto cruel aquibla bla bla .", image: "info2"),
+        OnBoardModel(title: "Tudo isso em um só local", description: "bla bla bla texto cruel aqui bla bla bla texto cruel aquibla bla bla texto cruel aquibla bla bla texto cruel aquibla bla bla texto cruel aquibla bla bla .", image: "info2")
     ]
 }
