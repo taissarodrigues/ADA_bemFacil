@@ -111,6 +111,7 @@ struct Telainicio: View {
                 }
             }
         }
+        .scrollIndicators(.hidden)
         .listStyle(.plain)
         .searchable(
             text: $searchText,

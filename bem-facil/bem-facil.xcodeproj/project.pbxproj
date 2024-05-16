@@ -246,6 +246,7 @@
 		CEAFECFB2BD94D9C00621FF3 = {
 			isa = PBXGroup;
 			children = (
+				E780E5FC2BF391AC003EB45E /* .swiftlint.yml */,
 				CEAFED062BD94D9C00621FF3 /* bem-facil */,
 				CEAFED052BD94D9C00621FF3 /* Products */,
 			);
@@ -269,7 +270,6 @@
 				4A4844962BDFB6B20075B6AF /* Models */,
 				4A4844992BDFB6D00075B6AF /* Features */,
 				CEAFED0D2BD94D9D00621FF3 /* Preview Content */,
-				E780E5FC2BF391AC003EB45E /* .swiftlint.yml */,
 			);
 			path = "bem-facil";
 			sourceTree = "<group>";
