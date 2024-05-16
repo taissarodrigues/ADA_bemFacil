@@ -17,8 +17,8 @@ struct CustomCard: View {
                 .frame(width: 163, height: 163)
             Image(model.image)
 
-            LinearGradient(gradient: Gradient(colors: [(Color.benUi(.azul3)), Color.benUi(.azul)]),
-                           startPoint: .center, endPoint: .bottom)
+            LinearGradient(gradient: Gradient(colors: [(Color.benUi(.azul3)), Color.benUi(.azul)]), startPoint: .center, endPoint: .bottom
+            )
             .opacity(0.3)
             .frame(width: 163, height: 163)
             .mask(RoundedRectangle(cornerRadius: 20)
