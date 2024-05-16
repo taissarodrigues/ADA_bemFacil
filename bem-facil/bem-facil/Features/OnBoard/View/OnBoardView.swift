@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct OnBoardView: View {
-    @ObservedObject var viewModel = OnBoardViewModel()
+    @StateObject var viewModel = OnBoardViewModel()
     @State private var animate: Bool = true
     
     var body: some View {

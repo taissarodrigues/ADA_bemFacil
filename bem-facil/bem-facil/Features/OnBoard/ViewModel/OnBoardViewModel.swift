@@ -5,9 +5,10 @@
 //  Created by Vitor Costa on 15/05/24.
 //
 
-import Foundation
+import SwiftUI
 
 final class OnBoardViewModel: ObservableObject {
+    @AppStorage("showOnBoarding") var showOnBoarding: Bool = true
     @Published var currentTab: Int = 0
     @Published var upButtonText: String = "Entendido"
     
@@ -15,6 +16,10 @@ final class OnBoardViewModel: ObservableObject {
         if currentTab < 3 {
             currentTab += 1
         }
+    }
+    
+    func onBoardingToggle() {
+        showOnBoarding.toggle()
     }
     
     func changeRightText() {

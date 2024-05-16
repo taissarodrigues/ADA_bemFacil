@@ -9,9 +9,14 @@ import SwiftUI
 
 @main
 struct MaisBEN: App {
+    @AppStorage("showOnBoarding") var showOnBoarding: Bool = true
     var body: some Scene {
         WindowGroup {
-            MainView()
+            if showOnBoarding {
+                OnBoardView()
+            } else {
+                MainView()
+            }
         }
     }
 }
