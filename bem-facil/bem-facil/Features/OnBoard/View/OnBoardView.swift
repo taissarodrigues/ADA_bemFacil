@@ -32,6 +32,9 @@ struct OnBoardView: View {
                 .transition(.slide)
             }
         }
+        .onChange(of: viewModel.currentTab, {
+            viewModel.changeRightText()
+        })
     }
 }
 

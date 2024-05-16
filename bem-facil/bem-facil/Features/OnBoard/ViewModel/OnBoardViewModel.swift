@@ -13,7 +13,7 @@ final class OnBoardViewModel: ObservableObject {
     @Published var upButtonText: String = "Entendido"
     
     func changeTabIndex() {
-        if currentTab < 3 {
+        if currentTab < 4 {
             currentTab += 1
         }
     }
@@ -23,7 +23,7 @@ final class OnBoardViewModel: ObservableObject {
     }
     
     func changeRightText() {
-        if currentTab == 2 {
+        if currentTab == 3 {
             upButtonText = "Vamos nessa"
         } else {
             upButtonText = "Entendido"
