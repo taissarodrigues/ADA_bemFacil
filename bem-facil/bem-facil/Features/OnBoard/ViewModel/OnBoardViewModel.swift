@@ -29,4 +29,12 @@ final class OnBoardViewModel: ObservableObject {
             upButtonText = "Entendido"
         }
     }
+    
+    func nextButtonAction() {
+        changeTabIndex()
+        changeRightText()
+        if currentTab > 3 {
+            onBoardingToggle()
+        }
+    }
 }

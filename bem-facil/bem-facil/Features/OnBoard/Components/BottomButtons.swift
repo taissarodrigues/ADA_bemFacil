@@ -20,11 +20,7 @@ struct BottomButtons: View {
                         .clipShape(.rect(cornerRadius: 16))
                 )
                 .onTapGesture {
-                    viewModel.changeTabIndex()
-                    viewModel.changeRightText()
-                    if viewModel.currentTab > 3 {
-                        viewModel.onBoardingToggle()
-                    }
+                    viewModel.nextButtonAction()
                 }
                 .padding(.bottom, 36)
             
