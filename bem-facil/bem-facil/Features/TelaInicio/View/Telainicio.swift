@@ -82,7 +82,6 @@ struct Telainicio: View {
                 .listStyle(.plain)
                 .searchable(text: $searchText, placement: .navigationBarDrawer(displayMode: .always))
             }
-
             .listStyle(.plain)
             .searchable(
                 text: $searchText,
