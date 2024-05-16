@@ -9,11 +9,27 @@ import SwiftUI
 
 struct OnBoardView: View {
     @ObservedObject var viewModel = OnBoardViewModel()
+    @State private var animate: Bool = true
     
     var body: some View {
-        TabView(selection: $viewModel.currentTab) {
-            ForEach(OnBoardModel.list) {
-                Text($0.description)
+        ZStack {
+            Color.onBoardBackGround.ignoresSafeArea()
+            VStack {
+                TabView(selection: $viewModel.currentTab) {
+                    ForEach(OnBoardModel.list) {
+                        OnBoardPageStyle(onBoardInfos: $0)
+                            .tag($0.id)
+                            .offset(y: animate ? 20 : 0)
+                            .onAppear {
+                                withAnimation(.easeOut(duration: 0.5)) {
+                                    animate = false
+                                }
+                            }
+                    }
+                }
+                .tabViewStyle(PageTabViewStyle())
+                .indexViewStyle(.page)
+                .transition(.slide)
             }
         }
     }
